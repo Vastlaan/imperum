@@ -16,6 +16,6 @@
 		@media only screen and (max-width: 26.3em){@content}
 	}
 	@if $breakpoint == "xxl"{
-		@media only screen and (min-width: 100em){@content}
+		@media only screen and (min-width: 102em){@content}
 	}
 }

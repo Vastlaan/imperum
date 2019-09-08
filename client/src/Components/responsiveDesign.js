@@ -2,14 +2,16 @@ import React, {useState} from 'react';
 import useGlobal from "../store";
 import { MdClose, MdDevices } from "react-icons/md";
 import { FaLaptop, FaTabletAlt, FaMobileAlt } from "react-icons/fa";
-import Mountain from '../img/lime.png'
+import Tree from '../img/lime.png'
+import Rose from '../img/rose.png'
+import Frog from '../img/frog.png'
 
 import { computer } from "../inline_styles/computer"
 import { tablet } from "../inline_styles/tablet"
 import { mobile } from "../inline_styles/mobile"
 
 
-const ResponsiveDesign = (style) =>{
+const ResponsiveDesign = () =>{
 
 	const [globalState, globalActions] = useGlobal()
 	const [screen, setScreen] = useState(computer)
@@ -23,7 +25,7 @@ const ResponsiveDesign = (style) =>{
 		}else if(target===computer){
 			setScreen(computer)
 		}
-		
+
 	}
 
 	return(
@@ -51,7 +53,7 @@ const ResponsiveDesign = (style) =>{
 					</div>
 				</div>
 				<div className='designWindow__box__icon' style={screen.icon}>
-					<div className='designWindow__box__icon-box'>
+					<div className='designWindow__box__icon-box' style={screen.iconBox}>
 						<MdDevices className='designWindow__box__icon-box-i'/>
 					</div>
 				</div>
@@ -65,13 +67,13 @@ const ResponsiveDesign = (style) =>{
 				</div>
 				<div className='designWindow__box__images' style={screen.images}>
 					<div className='designWindow__box__images--1' style={screen.picture}>
-						<img src={Mountain} alt='landscape' />
+						<img src={Tree} alt='Rose' />
 					</div>
 					<div className='designWindow__box__images--1' style={screen.picture}>
-						<img src={Mountain} alt='landscape' />
+						<img src={Rose} alt='landscape' />
 					</div>
 					<div className='designWindow__box__images--1' style={screen.picture}>
-						<img src={Mountain} alt='landscape' />
+						<img src={Frog} alt='landscape' />
 					</div>
 				</div>
 			</div>

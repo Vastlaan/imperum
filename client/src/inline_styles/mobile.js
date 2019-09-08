@@ -21,10 +21,10 @@ export const mobile = {
 		top:"calc(40% + 2rem)",
 		left:"0",
 		width: "calc(100%)",
-		height:"20%"
+		height:"10%"
 	},
 	para:{
-		top:"calc(65% + 5rem)",
+		top:"calc(55% + 5rem)",
 		right:"0",
 		width: "calc(100%)",
 		height:"80%",
@@ -52,5 +52,9 @@ export const mobile = {
 	},
 	picture:{
 		width:"100%"
+	},
+	iconBox:{
+		padding:"3rem",
+		fontSize:"6rem"
 	}
 }

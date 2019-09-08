@@ -25,7 +25,7 @@ html {
   @media only screen and (max-width: 26.3em) {
     html {
       font-size: 40%; } }
-  @media only screen and (min-width: 100em) {
+  @media only screen and (min-width: 102em) {
     html {
       font-size: 100%; } }
 
@@ -117,7 +117,7 @@ body {
   @media only screen and (max-width: 26.3em) {
     .i {
       font-size: 1.6rem; } }
-  @media only screen and (min-width: 100em) {
+  @media only screen and (min-width: 102em) {
     .i {
       font-size: 4rem; } }
   .i-white {
@@ -164,7 +164,7 @@ body {
       @media only screen and (max-width: 37.5em) {
         .header__title--name {
           font-size: 6rem; } }
-      @media only screen and (min-width: 100em) {
+      @media only screen and (min-width: 102em) {
         .header__title--name {
           font-size: 12rem; } }
       .header__title--name span {
@@ -181,7 +181,7 @@ body {
         .header__title--slogan {
           padding-left: 8rem;
           font-size: 1.85rem; } }
-      @media only screen and (min-width: 100em) {
+      @media only screen and (min-width: 102em) {
         .header__title--slogan {
           padding-left: 17rem;
           font-size: 2.8rem; } }
@@ -201,7 +201,7 @@ body {
       @media only screen and (max-width: 37.5em) {
         .header__quote--line {
           font-size: 2rem; } }
-      @media only screen and (min-width: 100em) {
+      @media only screen and (min-width: 102em) {
         .header__quote--line {
           font-size: 2.6rem; } }
       .header__quote--line span {
@@ -325,7 +325,7 @@ body {
     @media only screen and (max-width: 26.3em) {
       .offert__development {
         height: 50rem; } }
-    @media only screen and (min-width: 100em) {
+    @media only screen and (min-width: 102em) {
       .offert__development {
         height: 80rem; } }
     .offert__development--rotate {
@@ -590,7 +590,7 @@ body {
           bottom: 2rem;
           right: 2rem;
           font-size: 4rem; } }
-      @media only screen and (min-width: 100em) {
+      @media only screen and (min-width: 102em) {
         .card__details--medal {
           bottom: 5rem;
           right: 5rem;
@@ -642,7 +642,7 @@ body {
     @media only screen and (max-width: 26.3em) {
       .backcard__header {
         font-size: 2rem; } }
-    @media only screen and (min-width: 100em) {
+    @media only screen and (min-width: 102em) {
       .backcard__header {
         font-size: 5rem; } }
     .backcard__header span {
@@ -654,7 +654,7 @@ body {
       @media only screen and (max-width: 26.3em) {
         .backcard__header span {
           font-size: 2.6rem; } }
-      @media only screen and (min-width: 100em) {
+      @media only screen and (min-width: 102em) {
         .backcard__header span {
           font-size: 6.5rem; } }
   .backcard__price {
@@ -671,7 +671,7 @@ body {
     @media only screen and (max-width: 26.3em) {
       .backcard__price {
         font-size: 6rem; } }
-    @media only screen and (min-width: 100em) {
+    @media only screen and (min-width: 102em) {
       .backcard__price {
         font-size: 12rem; } }
     .backcard__price span {
@@ -682,7 +682,7 @@ body {
       @media only screen and (max-width: 26.3em) {
         .backcard__price span {
           font-size: 4.5rem; } }
-      @media only screen and (min-width: 100em) {
+      @media only screen and (min-width: 102em) {
         .backcard__price span {
           font-size: 9rem; } }
   .backcard__list {
@@ -718,7 +718,7 @@ body {
         @media only screen and (max-width: 26.3em) {
           .backcard__list--item-text {
             font-size: 2rem; } }
-        @media only screen and (min-width: 100em) {
+        @media only screen and (min-width: 102em) {
           .backcard__list--item-text {
             font-size: 2.8rem; } }
         .backcard__list--item-text span {
@@ -745,7 +745,7 @@ body {
             .backcard__list--item-text span {
               padding: .2rem .5rem;
               font-size: 2rem; } }
-          @media only screen and (min-width: 100em) {
+          @media only screen and (min-width: 102em) {
             .backcard__list--item-text span {
               font-size: 3rem; } }
   .backcard__btn {
@@ -813,7 +813,7 @@ body {
       text-transform: uppercase;
       line-height: 1.4;
       letter-spacing: .5rem; }
-      @media only screen and (min-width: 100em) {
+      @media only screen and (min-width: 102em) {
         .info--background--para {
           font-size: 24rem; } }
       .info--background--para-start {
@@ -848,7 +848,7 @@ body {
       .info__header {
         font-size: 3.5rem;
         margin-bottom: 1rem; } }
-    @media only screen and (min-width: 100em) {
+    @media only screen and (min-width: 102em) {
       .info__header {
         font-size: 8.2rem;
         margin-bottom: 10rem; } }
@@ -990,7 +990,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: pulsate 3s infinite;
         transition: all .5s;
         cursor: pointer; }
         .designWindow__box__buttons--1:hover {
@@ -1006,7 +1005,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: pulsate 3s .7s infinite;
         transition: all .5s;
         cursor: pointer; }
         .designWindow__box__buttons--2:hover {
@@ -1022,7 +1020,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: pulsate 3s 1.2s infinite;
         transition: all .5s;
         cursor: pointer; }
         .designWindow__box__buttons--3:hover {
@@ -1044,11 +1041,12 @@ body {
         display: inline-block;
         padding: 5rem;
         background-color: rgba(54, 181, 64, 0.7);
-        border-radius: 5px; }
+        border-radius: 5px;
+        font-size: 10rem;
+        line-height: 0;
+        transition: all 1s; }
         .designWindow__box__icon-box-i {
-          color: #fe5e51;
-          font-size: 10rem;
-          line-height: 0; }
+          color: #fe5e51; }
     .designWindow__box__para {
       position: absolute;
       display: flex;
@@ -1184,8 +1182,7 @@ body {
     @media only screen and (max-width: 50em) {
       .footer__contact {
         flex: auto;
-        max-width: 100%;
-        border-bottom: 1px solid rgba(54, 171, 181, 0.6); } }
+        max-width: 100%; } }
     .footer__contact:hover {
       background-color: rgba(255, 255, 255, 0.1); }
     .footer__contact:hover .footer__contact--address-phone-i {

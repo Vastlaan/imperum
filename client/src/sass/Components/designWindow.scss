@@ -72,7 +72,7 @@
 				display:flex;
 				justify-content: center;
 				align-items: center;
-				animation:pulsate 3s infinite;
+				//animation:pulsate 3s infinite;
 				transition:all .5s;
 				cursor:pointer;
 				&:hover{
@@ -93,7 +93,7 @@
 				display:flex;
 				justify-content: center;
 				align-items: center;
-				animation:pulsate 3s .7s infinite;
+				//animation:pulsate 3s .7s infinite;
 				transition:all .5s;
 				cursor:pointer;
 				&:hover{
@@ -114,7 +114,7 @@
 				display:flex;
 				justify-content: center;
 				align-items: center;
-				animation:pulsate 3s 1.2s infinite;
+				//animation:pulsate 3s 1.2s infinite;
 				transition:all .5s;
 				cursor:pointer;
 				&:hover{
@@ -144,11 +144,14 @@
 				padding:5rem;
 				background-color: rgba($color-green,.7);
 				border-radius: 5px;
+				font-size: 10rem;
+				line-height: 0;
+				transition:all 1s;
 
 				&-i{
 					color:$color-secondary;
-					font-size: 10rem;
-					line-height: 0;
+					
+					
 				}
 			}
 		}
