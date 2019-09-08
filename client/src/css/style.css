@@ -1,0 +1,1311 @@
+::-webkit-scrollbar {
+  display: none; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  scrollbar-width: none; }
+
+html {
+  box-sizing: border-box;
+  line-height: 1.6;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 62.5em) {
+    html {
+      font-size: 55%; } }
+  @media only screen and (max-width: 50em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 45%; } }
+  @media only screen and (max-width: 26.3em) {
+    html {
+      font-size: 40%; } }
+  @media only screen and (min-width: 100em) {
+    html {
+      font-size: 100%; } }
+
+body {
+  width: 100vw; }
+
+.App {
+  display: flex;
+  flex-direction: column; }
+
+@keyframes showUp {
+  0% {
+    transform: scale(0);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes comeFromUp {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes comeFromLeft {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes comeFromRight {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes delayTransform {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-50%); } }
+
+@keyframes jump {
+  0% {
+    transform: translateY(0); }
+  10% {
+    transform: translateY(-0.5rem); }
+  20% {
+    transform: translateY(0); }
+  30% {
+    transform: translateY(-0.5rem); }
+  40% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes changeWidth {
+  0% {
+    width: 80%; }
+  40% {
+    width: 80%; }
+  50% {
+    width: 30%; }
+  80% {
+    width: 30%; }
+  100% {
+    width: 80%; } }
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1); }
+  40% {
+    transform: scale(1.05); }
+  50% {
+    transform: scale(1); }
+  80% {
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1); } }
+
+.i {
+  font-size: 3rem;
+  margin-right: 1rem;
+  text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+  @media only screen and (max-width: 75em) {
+    .i {
+      font-size: 2.2rem;
+      margin-right: .5rem; } }
+  @media only screen and (max-width: 26.3em) {
+    .i {
+      font-size: 1.6rem; } }
+  @media only screen and (min-width: 100em) {
+    .i {
+      font-size: 4rem; } }
+  .i-white {
+    color: white; }
+  .i-blue {
+    color: #36abb5; }
+  .i-green {
+    color: yellowgreen; }
+  .i-red {
+    color: #fe5e51; }
+  .i-yellow {
+    color: #f6db5f; }
+
+.blue {
+  color: #36abb5; }
+
+.darkblue {
+  color: #164b50; }
+
+.green {
+  color: yellowgreen; }
+
+.red {
+  color: #fe5e51; }
+
+.yellow {
+  color: #f6db5f; }
+
+.header {
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(54, 171, 181, 0.3), rgba(54, 171, 181, 0.3)), url(../img/city.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: comeFromUp 1s;
+  transition-timing-function: cubic-bezier(0.1, 0.68, 0, 0.99); }
+  .header__title {
+    padding: 2rem; }
+    .header__title--name {
+      font-family: "Raleway", sans-serif;
+      font-size: 8rem;
+      color: #fe5e51;
+      line-height: 1;
+      text-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3); }
+      @media only screen and (max-width: 37.5em) {
+        .header__title--name {
+          font-size: 5rem; } }
+      @media only screen and (min-width: 100em) {
+        .header__title--name {
+          font-size: 12rem; } }
+      .header__title--name span {
+        color: #f6db5f; }
+    .header__title--slogan {
+      font-family: "Poiret One", cursive;
+      padding-left: 13rem;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #f6db5f;
+      letter-spacing: .2rem;
+      text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3); }
+      @media only screen and (max-width: 37.5em) {
+        .header__title--slogan {
+          padding-left: 8rem;
+          font-size: 1.7rem; } }
+      @media only screen and (min-width: 100em) {
+        .header__title--slogan {
+          padding-left: 17rem;
+          font-size: 2.8rem; } }
+  .header__quote {
+    padding: 2rem;
+    width: 50%; }
+    @media only screen and (max-width: 50em) {
+      .header__quote {
+        width: 100%; } }
+    .header__quote--line {
+      font-family: "Poiret One", cursive;
+      font-weight: 600;
+      font-size: 2.2rem;
+      letter-spacing: .2rem;
+      color: white;
+      text-align: center; }
+      @media only screen and (max-width: 37.5em) {
+        .header__quote--line {
+          font-size: 1.6rem; } }
+      @media only screen and (min-width: 100em) {
+        .header__quote--line {
+          font-size: 2.6rem; } }
+      .header__quote--line span {
+        display: block;
+        margin: 2rem;
+        color: white; }
+      .header__quote--line-left {
+        text-align: left; }
+      .header__quote--line-right {
+        text-align: right; }
+
+.navigation__button {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  width: 5rem;
+  height: 5rem;
+  z-index: 99; }
+  @media only screen and (max-width: 37.5em) {
+    .navigation__button {
+      top: 1rem;
+      right: 1rem;
+      width: 3rem;
+      height: 3rem; } }
+  .navigation__button--label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    background-color: #fe5e51;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3); }
+    .navigation__button--label:hover + .navigation__button--strip::after {
+      transform: translateY(-1.2rem); }
+      @media only screen and (max-width: 37.5em) {
+        .navigation__button--label:hover + .navigation__button--strip::after {
+          transform: translateY(-0.8rem); } }
+    .navigation__button--label:hover + .navigation__button--strip::before {
+      transform: translateY(1.2rem); }
+      @media only screen and (max-width: 37.5em) {
+        .navigation__button--label:hover + .navigation__button--strip::before {
+          transform: translateY(0.6rem); } }
+  .navigation__button--strip {
+    width: 3rem;
+    height: .2rem;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; }
+    @media only screen and (max-width: 37.5em) {
+      .navigation__button--strip {
+        width: 1.5rem;
+        height: .2rem; } }
+    .navigation__button--strip::after {
+      content: "";
+      display: block;
+      width: 3rem;
+      height: 2px;
+      background-color: white;
+      transform: translateY(-1rem);
+      transition: transform .3s;
+      pointer-events: none; }
+      @media only screen and (max-width: 37.5em) {
+        .navigation__button--strip::after {
+          width: 1.5rem;
+          height: .2rem;
+          transform: translateY(-0.6rem); } }
+    .navigation__button--strip::before {
+      content: "";
+      display: block;
+      width: 3rem;
+      height: 2px;
+      background-color: white;
+      transform: translateY(0.8rem);
+      transition: transform .3s;
+      pointer-events: none; }
+      @media only screen and (max-width: 37.5em) {
+        .navigation__button--strip::before {
+          width: 1.5rem;
+          height: .2rem;
+          transform: translateY(0.4rem); } }
+  .navigation__button input {
+    display: none; }
+    .navigation__button input:checked ~ .navigation__button--strip {
+      transform: translate(-50%, -50%) rotate(45deg); }
+    .navigation__button input:checked ~ .navigation__button--strip::after {
+      transform: translate(0) rotate(-90deg); }
+    .navigation__button input:checked ~ .navigation__button--strip::before {
+      display: none; }
+
+.offert {
+  display: flex;
+  flex-direction: row-reverse;
+  background-image: linear-gradient(to bottom, rgba(54, 171, 181, 0.4), rgba(54, 171, 181, 0.8)), url(../img/ocean.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 10rem; }
+  @media only screen and (max-width: 50em) {
+    .offert {
+      flex-direction: column; } }
+  .offert__development {
+    height: 70rem;
+    flex: 0 0 50%;
+    animation: comeFromLeft 1s, delayTransform .5s 1s;
+    transition-timing-function: cubic-bezier(0.1, 0.68, 0, 0.99);
+    transform: translateY(-50%); }
+    @media only screen and (max-width: 75em) {
+      .offert__development {
+        height: 60rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .offert__development {
+        animation: comeFromLeft 1s;
+        transform: translateY(0);
+        flex: auto; } }
+    @media only screen and (max-width: 26.3em) {
+      .offert__development {
+        height: 50rem; } }
+    @media only screen and (min-width: 100em) {
+      .offert__development {
+        height: 80rem; } }
+    .offert__development--rotate {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background-image: linear-gradient(to bottom, transparent 50%, transparent 50%);
+      position: relative;
+      perspective: 150rem;
+      -moz-perspective: 150rem;
+      overflow: hidden; }
+      @media only screen and (max-width: 50em) {
+        .offert__development--rotate {
+          width: 80%;
+          margin: 0 auto; } }
+      @media only screen and (max-width: 37.5em) {
+        .offert__development--rotate {
+          width: 100%;
+          margin: 0 auto; } }
+      .offert__development--rotate-side {
+        position: absolute;
+        left: 5rem;
+        top: 5rem;
+        width: calc(100% - 10rem);
+        height: calc(100% - 10rem);
+        backface-visibility: hidden;
+        transition: all .8s ease;
+        border-radius: 5px;
+        box-shadow: 0 0 3rem rgba(0, 0, 0, 0.4); }
+        @media only screen and (max-width: 62.5em) {
+          .offert__development--rotate-side {
+            left: 2rem;
+            top: 2rem;
+            width: calc(100% - 4rem);
+            height: calc(100% - 4rem); } }
+        @media only screen and (max-width: 50em) {
+          .offert__development--rotate-side {
+            left: 4rem;
+            top: 4rem;
+            width: calc(100% - 8rem);
+            height: calc(100% - 8rem); } }
+        @media only screen and (max-width: 37.5em) {
+          .offert__development--rotate-side {
+            left: 2rem;
+            top: 2rem;
+            width: calc(100% - 4rem);
+            height: calc(100% - 4rem); } }
+        .offert__development--rotate-side-front {
+          overflow: hidden; }
+          .offert__development--rotate-side-front::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: rgba(181, 64, 54, 0.8);
+            z-index: 9; }
+          .offert__development--rotate-side-front::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -50%;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: rgba(181, 64, 54, 0.8);
+            z-index: 9; }
+        .offert__development--rotate-side-back {
+          transform: rotateY(-180deg); }
+      .offert__development--rotate:hover .offert__development--rotate-side-front {
+        transform: rotateY(-180deg); }
+      .offert__development--rotate:hover .offert__development--rotate-side-back {
+        transform: rotateY(0); }
+  .offert__design {
+    flex: 0 0 50%;
+    animation: comeFromRight 1s;
+    transition-timing-function: cubic-bezier(0.1, 0.68, 0, 0.99); }
+    @media only screen and (max-width: 50em) {
+      .offert__design {
+        flex: auto; } }
+
+.design {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr); }
+  @media only screen and (max-width: 62.5em) {
+    .design {
+      grid-template-columns: 1fr; } }
+  .design__section {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    transition: transform .3s;
+    cursor: pointer; }
+    @media only screen and (max-width: 62.5em) {
+      .design__section {
+        width: 70%;
+        margin: 0 auto; } }
+    @media only screen and (max-width: 37.5em) {
+      .design__section {
+        width: 90%;
+        margin: 0 auto; } }
+    .design__section:hover {
+      transform: scale(1.1); }
+    .design__section--header {
+      font-family: "Raleway", sans-serif;
+      font-weight: 300;
+      font-size: 2rem;
+      letter-spacing: .2rem;
+      text-align: center;
+      color: white; }
+    .design__section--icon {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 2rem;
+      border-radius: 5px;
+      width: 50%; }
+      .design__section--icon-1 {
+        clip-path: polygon(20% 0, 100% 0, 100% 30%, 100% 80%, 80% 100%, 0 100%, 0% 70%, 0 20%);
+        color: #fe5e51; }
+      .design__section--icon-2 {
+        clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 80% 100%, 20% 100%, 0 80%, 0 20%);
+        color: #36b540; }
+      .design__section--icon-3 {
+        clip-path: polygon(20% 0, 100% 0, 100% 30%, 100% 80%, 80% 100%, 0 100%, 0% 70%, 0 20%);
+        color: #ffb554; }
+      .design__section--icon-4 {
+        clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 80% 100%, 20% 100%, 0 80%, 0 20%);
+        color: #36abb5; }
+      .design__section--icon-i {
+        font-size: 5rem; }
+    .design__section--para p {
+      color: snow;
+      font-family: "Poiret One", cursive;
+      font-size: 1.8rem;
+      text-align: center; }
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; }
+  .card__blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 50%);
+    border-radius: 3px;
+    filter: blur(3px);
+    z-index: 1; }
+    @media only screen and (max-width: 50em) {
+      .card__blur {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 50%); } }
+  .card__header {
+    display: block;
+    z-index: 89;
+    font-family: "Raleway", sans-serif;
+    padding: 1rem; }
+    .card__header--main {
+      font-size: 3rem;
+      font-weight: 300;
+      margin-top: 2rem;
+      text-transform: uppercase;
+      color: snow;
+      letter-spacing: .2rem;
+      text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+      @media only screen and (max-width: 75em) {
+        .card__header--main {
+          font-size: 2.5rem; } }
+      @media only screen and (max-width: 26.3em) {
+        .card__header--main {
+          font-size: 2rem; } }
+    .card__header--price {
+      color: snow; }
+      .card__header--price-text-left {
+        font-size: 2rem; }
+        @media only screen and (max-width: 75em) {
+          .card__header--price-text-left {
+            font-size: 1.6rem; } }
+        @media only screen and (max-width: 26.3em) {
+          .card__header--price-text-left {
+            font-size: 1.4rem; } }
+      .card__header--price-text-right {
+        font-size: 2rem;
+        text-align: right; }
+        @media only screen and (max-width: 75em) {
+          .card__header--price-text-right {
+            font-size: 1.6rem; } }
+        @media only screen and (max-width: 26.3em) {
+          .card__header--price-text-right {
+            font-size: 1.4rem; } }
+      .card__header--price-number {
+        color: #f6db5f;
+        text-align: center;
+        font-size: 10rem;
+        text-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3); }
+        @media only screen and (max-width: 75em) {
+          .card__header--price-number {
+            font-size: 7.5rem; } }
+        @media only screen and (max-width: 26.3em) {
+          .card__header--price-number {
+            font-size: 6rem; } }
+        .card__header--price-number span {
+          font-size: 8rem; }
+          @media only screen and (max-width: 75em) {
+            .card__header--price-number span {
+              font-size: 6rem; } }
+          @media only screen and (max-width: 26.3em) {
+            .card__header--price-number span {
+              font-size: 4.5rem; } }
+  .card__details {
+    width: 100%;
+    padding-left: 10%;
+    z-index: 79;
+    color: white;
+    font-family: "Poiret One", cursive; }
+    .card__details--header {
+      font-size: 2.5rem;
+      letter-spacing: .2rem; }
+    .card__details--list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      margin-left: 10%;
+      margin-top: 2rem; }
+      .card__details--list li {
+        font-size: 2rem;
+        letter-spacing: .2rem;
+        display: flex;
+        align-items: center; }
+      .card__details--list-icon {
+        color: yellowgreen;
+        margin-right: 1rem; }
+    .card__details--medal {
+      position: absolute;
+      bottom: 3rem;
+      right: 3rem;
+      font-size: 5rem;
+      color: #36b540; }
+      @media only screen and (max-width: 62.5em) {
+        .card__details--medal {
+          bottom: 2rem;
+          right: 2rem;
+          font-size: 4rem; } }
+      @media only screen and (min-width: 100em) {
+        .card__details--medal {
+          bottom: 5rem;
+          right: 5rem;
+          font-size: 10rem; } }
+
+.backcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  .backcard__blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.1) 50%, rgba(181, 64, 54, 0.9) 50%);
+    border-radius: 3px;
+    z-index: 1; }
+    @media only screen and (max-width: 50em) {
+      .backcard__blur {
+        background-image: linear-gradient(to bottom right, rgba(181, 64, 54, 0.8) 50%, rgba(246, 219, 95, 0.8) 50%); } }
+    .backcard__blur--badge {
+      clip-path: polygon(16% 0%, 84% 0%, 100% 100%, 0 100%);
+      width: 20rem;
+      position: absolute;
+      top: 4.25rem;
+      right: -4.1rem;
+      background: linear-gradient(#36b540 0%, #36b540 100%);
+      transform: rotate(45deg);
+      text-align: center; }
+      .backcard__blur--badge span {
+        font-family: "Raleway", sans-serif;
+        font-size: 2rem;
+        color: snow; }
+  .backcard__header {
+    padding: 0 2rem;
+    font-family: "Raleway", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    color: #fe5e51;
+    text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.6);
+    z-index: 89;
+    border-bottom: 1px solid rgba(254, 94, 81, 0.7); }
+    @media only screen and (max-width: 75em) {
+      .backcard__header {
+        font-size: 3rem; } }
+    @media only screen and (max-width: 26.3em) {
+      .backcard__header {
+        font-size: 2rem; } }
+    @media only screen and (min-width: 100em) {
+      .backcard__header {
+        font-size: 5rem; } }
+    .backcard__header span {
+      font-size: 5rem;
+      color: #f6db5f; }
+      @media only screen and (max-width: 75em) {
+        .backcard__header span {
+          font-size: 4rem; } }
+      @media only screen and (max-width: 26.3em) {
+        .backcard__header span {
+          font-size: 2.6rem; } }
+      @media only screen and (min-width: 100em) {
+        .backcard__header span {
+          font-size: 6.5rem; } }
+  .backcard__price {
+    font-family: "Raleway", sans-serif;
+    color: #f6db5f;
+    text-align: center;
+    font-size: 10rem;
+    text-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+    line-height: 1;
+    z-index: 89; }
+    @media only screen and (max-width: 75em) {
+      .backcard__price {
+        font-size: 7.5rem; } }
+    @media only screen and (max-width: 26.3em) {
+      .backcard__price {
+        font-size: 6rem; } }
+    @media only screen and (min-width: 100em) {
+      .backcard__price {
+        font-size: 12rem; } }
+    .backcard__price span {
+      font-size: 8rem; }
+      @media only screen and (max-width: 75em) {
+        .backcard__price span {
+          font-size: 6rem; } }
+      @media only screen and (max-width: 26.3em) {
+        .backcard__price span {
+          font-size: 4.5rem; } }
+      @media only screen and (min-width: 100em) {
+        .backcard__price span {
+          font-size: 9rem; } }
+  .backcard__list {
+    display: block;
+    list-style: none;
+    margin-top: 2rem;
+    z-index: 89; }
+    .backcard__list--item {
+      margin: 1rem 0;
+      padding: 1rem 2rem; }
+      @media only screen and (max-width: 75em) {
+        .backcard__list--item {
+          padding: .5rem 1.5rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .backcard__list--item {
+          margin: .5rem 0;
+          padding: .5rem 1rem; } }
+      .backcard__list--item-text {
+        font-family: "Poiret One", cursive;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        color: snow; }
+        @media only screen and (max-width: 75em) {
+          .backcard__list--item-text {
+            font-size: 1.8rem; } }
+        @media only screen and (max-width: 62.5em) {
+          .backcard__list--item-text {
+            font-size: 2rem; } }
+        @media only screen and (max-width: 50em) {
+          .backcard__list--item-text {
+            font-size: 2.5rem; } }
+        @media only screen and (max-width: 26.3em) {
+          .backcard__list--item-text {
+            font-size: 2rem; } }
+        @media only screen and (min-width: 100em) {
+          .backcard__list--item-text {
+            font-size: 2.8rem; } }
+        .backcard__list--item-text span {
+          line-height: 1.2;
+          background-color: #36abb5;
+          border-radius: 3px;
+          color: snow;
+          padding: .3rem 1rem;
+          margin: 0 .5rem;
+          font-size: 2.2rem;
+          font-weight: 500;
+          box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3); }
+          @media only screen and (max-width: 75em) {
+            .backcard__list--item-text span {
+              padding: .1rem .5rem;
+              font-size: 1.8rem; } }
+          @media only screen and (max-width: 62.5em) {
+            .backcard__list--item-text span {
+              font-size: 2.2rem; } }
+          @media only screen and (max-width: 50em) {
+            .backcard__list--item-text span {
+              font-size: 2.6rem; } }
+          @media only screen and (max-width: 26.3em) {
+            .backcard__list--item-text span {
+              padding: .2rem .5rem;
+              font-size: 2.5rem; } }
+          @media only screen and (min-width: 100em) {
+            .backcard__list--item-text span {
+              font-size: 3rem; } }
+  .backcard__btn {
+    margin-bottom: 3rem;
+    display: block;
+    z-index: 89;
+    padding: .5rem 3rem;
+    border-radius: 3px;
+    background-color: #36b540;
+    font-family: "Poiret One", cursive;
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    letter-spacing: .2rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+    transition: all .3s;
+    cursor: pointer; }
+    .backcard__btn:hover {
+      transform: translatey(-0.3rem);
+      box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.1); }
+    .backcard__btn:active {
+      transform: translatey(-0.2rem);
+      box-shadow: 0 1.3rem 1rem rgba(0, 0, 0, 0.2); }
+    @media only screen and (max-width: 75em) {
+      .backcard__btn {
+        padding: .5rem 2rem;
+        font-size: 2.6rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .backcard__btn {
+        padding: .5rem 2rem;
+        font-size: 2.6rem; } }
+
+.info {
+  width: 100%;
+  padding: 5rem 0 10rem 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 59;
+  background-image: linear-gradient(to bottom, rgba(54, 171, 181, 0.8), #36abb5), url(../img/ocean.png);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .info--background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 69;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none; }
+    @media only screen and (max-width: 26.3em) {
+      .info--background {
+        height: 100%; } }
+    .info--background--para {
+      display: block;
+      font-size: 18rem;
+      font-family: "Poiret One", cursive;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.2);
+      text-transform: uppercase;
+      line-height: 1.4;
+      letter-spacing: .5rem; }
+      @media only screen and (min-width: 100em) {
+        .info--background--para {
+          font-size: 24rem; } }
+      .info--background--para-start {
+        align-self: flex-start; }
+      .info--background--para-end {
+        align-self: flex-end; }
+      .info--background--para-center {
+        align-self: center; }
+  .info__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    font-family: "Raleway", sans-serif;
+    font-size: 6rem;
+    font-weight: 500;
+    color: #1b5b60;
+    z-index: 81;
+    letter-spacing: .3rem;
+    text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    align-self: flex-start;
+    border-bottom: 1px solid rgba(181, 64, 54, 0.3); }
+    @media only screen and (max-width: 50em) {
+      .info__header {
+        font-size: 5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .info__header {
+        font-size: 4.6rem;
+        margin-bottom: 5rem; } }
+    @media only screen and (max-width: 26.3em) {
+      .info__header {
+        font-size: 3.5rem;
+        margin-bottom: 1rem; } }
+    @media only screen and (min-width: 100em) {
+      .info__header {
+        font-size: 8.2rem;
+        margin-bottom: 10rem; } }
+    .info__header span {
+      font-size: 9rem;
+      font-weight: 300;
+      color: #b54036;
+      margin-right: 2rem;
+      z-index: 79;
+      border-right: 1px solid rgba(181, 64, 54, 0.3); }
+      @media only screen and (max-width: 50em) {
+        .info__header span {
+          font-size: 6rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .info__header span {
+          font-size: 4.2rem;
+          margin-right: 1rem; } }
+      @media only screen and (max-width: 26.3em) {
+        .info__header span {
+          font-size: 3rem;
+          margin-right: .2rem; } }
+  .info__window {
+    width: 80%;
+    z-index: 61;
+    border-radius: 3px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; }
+    @media only screen and (max-width: 75em) {
+      .info__window {
+        width: 100%; } }
+    .info__window--blocks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      width: 90%;
+      margin: 2rem auto;
+      position: relative; }
+      @media only screen and (max-width: 75em) {
+        .info__window--blocks {
+          width: 100%; } }
+      .info__window--blocks-1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        align-content: center;
+        justify-self: center; }
+        @media only screen and (max-width: 50em) {
+          .info__window--blocks-1 {
+            grid-column: 1/3; } }
+        @media only screen and (max-width: 26.3em) {
+          .info__window--blocks-1 {
+            margin-top: 2rem; } }
+      .info__window--blocks-2 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        align-content: center;
+        justify-self: center; }
+        @media only screen and (max-width: 50em) {
+          .info__window--blocks-2 {
+            grid-column: 1/3;
+            margin-top: 10rem; } }
+        @media only screen and (max-width: 26.3em) {
+          .info__window--blocks-2 {
+            margin-top: 2rem; } }
+      .info__window--blocks-3 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        align-content: center;
+        justify-self: center; }
+        @media only screen and (max-width: 50em) {
+          .info__window--blocks-3 {
+            grid-column: 1/3;
+            margin-top: 10rem; } }
+        @media only screen and (max-width: 26.3em) {
+          .info__window--blocks-3 {
+            margin-top: 2rem; } }
+
+.designWindow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(54, 171, 181, 0.9), #0a2224), url(../img/ocean.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+  animation: showUp .3s ease-out;
+  display: flex;
+  justify-content: center; }
+  .designWindow__close {
+    background-color: #fe5e51;
+    padding: .5rem;
+    line-height: 0;
+    font-size: 4rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px; }
+    @media only screen and (max-width: 37.5em) {
+      .designWindow__close {
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem; } }
+  .designWindow__box {
+    margin: 2.5% 10rem;
+    height: 90%;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    transition: all 1s;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll; }
+    .designWindow__box__header {
+      position: absolute;
+      font-family: "Raleway", sans-serif;
+      font-size: 4rem;
+      transition: all 1s;
+      color: rgba(10, 34, 36, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .designWindow__box__buttons {
+      position: absolute;
+      transform: translate(-2rem, 2rem);
+      padding: 1rem;
+      transition: all 1s;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .designWindow__box__buttons--1 {
+        border-radius: 50%;
+        background-color: #36b540;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: pulsate 3s infinite;
+        transition: all .5s;
+        cursor: pointer; }
+        .designWindow__box__buttons--1:hover {
+          animation: none;
+          transform: scale(1.2); }
+        .designWindow__box__buttons--1 > * {
+          font-size: 4rem;
+          line-height: 0;
+          color: rgba(10, 34, 36, 0.7); }
+      .designWindow__box__buttons--2 {
+        border-radius: 50%;
+        background-color: #fe5e51;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: pulsate 3s .7s infinite;
+        transition: all .5s;
+        cursor: pointer; }
+        .designWindow__box__buttons--2:hover {
+          animation: none;
+          transform: scale(1.2); }
+        .designWindow__box__buttons--2 > * {
+          font-size: 4rem;
+          line-height: 0;
+          color: rgba(10, 34, 36, 0.7); }
+      .designWindow__box__buttons--3 {
+        border-radius: 50%;
+        background-color: #ffb554;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: pulsate 3s 1.2s infinite;
+        transition: all .5s;
+        cursor: pointer; }
+        .designWindow__box__buttons--3:hover {
+          animation: none;
+          transform: scale(1.2); }
+        .designWindow__box__buttons--3 > * {
+          font-size: 4rem;
+          line-height: 0;
+          color: rgba(10, 34, 36, 0.7);
+          transition: all .5s; }
+    .designWindow__box__icon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      transition: all 1s; }
+      .designWindow__box__icon-box {
+        display: inline-block;
+        padding: 5rem;
+        background-color: rgba(54, 181, 64, 0.7);
+        border-radius: 5px; }
+        .designWindow__box__icon-box-i {
+          color: #fe5e51;
+          font-size: 10rem;
+          line-height: 0; }
+    .designWindow__box__para {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      transition: all 1s; }
+      .designWindow__box__para p {
+        padding: 2rem;
+        font-family: "Poiret One", cursive;
+        font-size: 2rem;
+        font-weight: 600; }
+    .designWindow__box__images {
+      display: flex;
+      transition: all 1s; }
+      .designWindow__box__images div {
+        width: 33%;
+        height: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .designWindow__box__images div img {
+          height: 100%;
+          border-radius: 10px;
+          box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3); }
+
+.block {
+  width: 80%;
+  height: 50rem;
+  position: relative;
+  z-index: 79;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media only screen and (max-width: 26.3em) {
+    .block {
+      width: 95%; } }
+  .block::after {
+    z-index: 69;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 2rem #0A2224;
+    background-size: 150% 130%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    transition: all .3s; }
+  .block:hover::after {
+    background-size: 160% 140%; }
+  .block div {
+    z-index: 79; }
+  .block__1::after {
+    background-image: linear-gradient(to bottom, rgba(255, 181, 84, 0.5), rgba(255, 181, 84, 0.7)), url(../img/banana.png);
+    background-position: center; }
+  .block__2::after {
+    background-image: linear-gradient(to bottom, rgba(181, 64, 54, 0.5), rgba(181, 64, 54, 0.7)), url(../img/lime.png);
+    background-position: center bottom; }
+  .block__3::after {
+    background-image: linear-gradient(to bottom, rgba(54, 171, 181, 0.5), rgba(54, 171, 181, 0.7)), url(../img/neuron.png);
+    background-position: center bottom; }
+
+.pakket {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 99; }
+  .pakket__header {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+    color: #0A2224;
+    font-weight: 300;
+    text-transform: uppercase; }
+    .pakket__header span {
+      font-size: 3.8rem; }
+  .pakket__price {
+    font-size: 8rem;
+    text-align: center;
+    line-height: 1;
+    color: #15484c; }
+    .pakket__price span {
+      display: block;
+      width: 150%;
+      font-size: 1.4rem;
+      text-align: right;
+      color: #b54036; }
+  .pakket__info {
+    list-style: none;
+    width: 80%;
+    margin: 2rem auto; }
+    .pakket__info li {
+      font-family: "Poiret One", cursive;
+      font-size: 2rem;
+      color: white;
+      text-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.9); }
+  .pakket__button {
+    margin-bottom: 2rem;
+    padding: .2rem 3rem;
+    background-color: #36b540;
+    font-size: 2.4rem;
+    font-family: "Poiret One", cursive;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.3);
+    transition: all .3s; }
+    .pakket__button:hover {
+      transform: translateY(-0.2rem);
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
+
+.footer {
+  width: 100%;
+  background-color: #0A2224;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  @media only screen and (max-width: 37.5em) {
+    .footer {
+      flex-direction: column; } }
+  .footer__contact {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 33%;
+    max-width: 33%;
+    transition: all .3s; }
+    @media only screen and (max-width: 50em) {
+      .footer__contact {
+        flex: auto;
+        max-width: 100%;
+        align-items: center; } }
+    .footer__contact:hover {
+      background-color: rgba(255, 255, 255, 0.1); }
+    .footer__contact:hover .footer__contact--address-phone-i {
+      animation: jump 2s infinite; }
+    .footer__contact:hover .footer__contact--address-email-i {
+      animation: jump 2s .5s infinite; }
+    .footer__contact--logo {
+      margin-bottom: 2rem; }
+      .footer__contact--logo-header {
+        font-family: "Raleway", sans-serif;
+        font-size: 6rem;
+        color: rgba(254, 94, 81, 0.6);
+        line-height: 1;
+        text-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3); }
+        .footer__contact--logo-header span {
+          color: rgba(246, 219, 95, 0.6); }
+      .footer__contact--logo-slogan {
+        font-family: "Poiret One", cursive;
+        padding-left: 13rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: rgba(246, 219, 95, 0.6);
+        letter-spacing: .2rem;
+        text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3); }
+    .footer__contact--address {
+      font-family: "Poiret One", cursive;
+      font-size: 1.9rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 2rem; }
+      .footer__contact--address-phone {
+        font-family: "Raleway", sans-serif;
+        font-size: 3rem;
+        color: rgba(54, 181, 64, 0.8);
+        display: flex;
+        align-items: center;
+        cursor: pointer; }
+        .footer__contact--address-phone-i {
+          font-size: 4rem;
+          margin-right: 1rem; }
+      .footer__contact--address-email {
+        font-family: "Raleway", sans-serif;
+        font-size: 3rem;
+        color: rgba(246, 219, 95, 0.8);
+        display: flex;
+        align-items: center;
+        cursor: pointer; }
+        .footer__contact--address-email-i {
+          font-size: 4rem;
+          margin-right: 1rem; }
+    .footer__contact--sign {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .footer__contact--sign-i {
+        font-size: 7rem;
+        color: rgba(255, 255, 255, 0.4);
+        transform: scale(1.4); }
+  .footer__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    flex: 0 0 33%;
+    max-width: 33%; }
+    @media only screen and (max-width: 50em) {
+      .footer__social {
+        flex: auto;
+        max-width: 100%;
+        align-items: center; } }
+    .footer__social:hover {
+      background-color: rgba(255, 255, 255, 0.1); }
+    .footer__social--header {
+      font-family: "Raleway", sans-serif;
+      font-size: 4rem;
+      color: rgba(255, 255, 255, 0.6); }
+    .footer__social--facebook {
+      margin-top: 2rem;
+      font-size: 4rem;
+      color: #3C5A99;
+      transition: transform .3s;
+      cursor: pointer; }
+      .footer__social--facebook:hover {
+        transform: scale(1.5); }
+    .footer__social--linkedin {
+      margin-top: 2rem;
+      font-size: 4rem;
+      color: #0077B5;
+      transition: transform .3s;
+      cursor: pointer; }
+      .footer__social--linkedin:hover {
+        transform: scale(1.5); }
+    .footer__social--instagram {
+      margin-top: 2rem;
+      font-size: 4rem;
+      color: #C13584;
+      background-clip: padding-box;
+      transition: transform .3s;
+      cursor: pointer; }
+      .footer__social--instagram:hover {
+        transform: scale(1.5); }
+  .footer__legal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    flex: 0 0 33%;
+    max-width: 33%; }
+    @media only screen and (max-width: 50em) {
+      .footer__legal {
+        flex: auto;
+        max-width: 100%;
+        align-items: center; } }
+    .footer__legal:hover {
+      background-color: rgba(255, 255, 255, 0.1); }
+    .footer__legal--cookies {
+      font-size: 5rem;
+      color: #fe5e51; }
+    .footer__legal--para {
+      margin: 1rem 0;
+      font-family: "Raleway", sans-serif;
+      color: #36abb5;
+      font-size: 2rem;
+      transition: color .3s;
+      cursor: pointer; }
+      .footer__legal--para:hover {
+        color: rgba(255, 255, 255, 0.6); }

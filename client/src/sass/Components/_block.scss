@@ -1,0 +1,132 @@
+.block{
+	width:80%;
+	height:50rem;
+	position:relative;
+	z-index: 79;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+
+	@include respond(xs){
+		width:95%;
+	}
+
+
+	&::after{
+		z-index: 69;
+		display:block;
+		content:"";
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		border-radius: 5px;
+		box-shadow: 0 0 2rem $color-primary-dark;
+		background-size: 150% 130%;
+		background-repeat: no-repeat;
+		background-position: center top;
+		transition:all .3s;
+		//clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+	}
+	&:hover {
+		&::after{
+			background-size: 160% 140%;
+		}
+	}
+	div{
+		z-index: 79;
+	}
+	
+	&__1{	
+
+		&::after{
+		    background-image: linear-gradient(to bottom,rgba($color-tertiary,.5), rgba($color-tertiary,.7)), url(../img/banana.png);
+		    background-position: center;
+		}
+
+	}
+	&__2{
+
+		&::after{			
+			background-image: linear-gradient(to bottom,rgba($color-secondary-dark,.5), rgba($color-secondary-dark,.7)), url(../img/lime.png);
+			background-position: center bottom;
+		}
+	}
+	&__3{
+
+		&::after{
+			background-image: linear-gradient(to bottom,rgba($color-primary,.5), rgba($color-primary,.7)), url(../img/neuron.png);
+			background-position: center bottom;
+		}
+	}
+}
+
+.pakket{
+	width:100%;
+	min-height: 100%;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 99;
+
+	&__header{
+		font-family: $font-raleway;
+		font-size: 2.5rem;
+		color:$color-primary-dark;
+		font-weight: 300;
+		text-transform: uppercase;
+
+		span{
+			font-size: 3.8rem;
+		}
+	}
+
+	&__price{
+		font-size: 8rem;
+		text-align: center;
+		line-height: 1;
+		color:lighten($color-primary-dark,10%);
+
+		span{
+			display:block;
+			width:150%;
+			font-size: 1.4rem;
+			text-align: right;
+			color:$color-secondary-dark;
+		}
+	}
+
+	&__info{
+		list-style: none;
+		width:80%;
+		margin:2rem auto;
+
+		li{
+			font-family: $font-poiret;
+			font-size: 2rem;
+			color:white;
+			text-shadow: .2rem .2rem .5rem rgba(0,0,0,.9);
+		}
+	}
+
+	&__button{
+		margin-bottom: 2rem;
+		padding:.2rem 3rem;
+		background-color: $color-green;
+		font-size: 2.4rem;
+		font-family: $font-poiret;
+		border-radius: 5px;
+		color:white;
+		cursor: pointer;
+		box-shadow: 0 .8rem .8rem rgba(0,0,0,.3);
+		transition:all .3s;
+
+		&:hover{
+			transform:translateY(-.2rem);
+			box-shadow: 0 1rem 1rem rgba(0,0,0,.2);
+		}
+	}
+
+}

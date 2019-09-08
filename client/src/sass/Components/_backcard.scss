@@ -1,0 +1,221 @@
+.backcard{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	&__blur{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background-image: linear-gradient(to bottom right, rgba(black,.1) 50%, rgba($color-secondary-dark,.9) 50%);
+		border-radius: 3px;
+		z-index: 1;
+		@include respond(m){
+			background-image: linear-gradient(to bottom right, rgba($color-secondary-dark,.8) 50%, rgba($color-tertiary-light,.8) 50%);
+		}
+
+		&--badge{
+			clip-path: polygon(16% 0%,84% 0%, 100% 100%, 0 100%);
+			width:20rem;
+			position:absolute;
+			top:4.25rem;
+			right:-4.1rem;
+			background: linear-gradient($color-green 0%, $color-green 100%);
+			transform:rotate(45deg);
+			text-align: center;
+
+			span{
+				font-family: $font-raleway;
+				font-size: 2rem;
+				color:snow;
+			}
+		}
+	}
+
+	&__header{
+		padding: 0 2rem;
+		font-family: $font-raleway;
+		font-size: 3.5rem;
+		font-weight: 300;
+		letter-spacing: .2rem;
+		text-transform: uppercase;
+		color:$color-secondary;
+		text-shadow: .5rem .5rem 1rem rgba(0,0,0,.6);
+		z-index: 89;
+		border-bottom: 1px solid rgba($color-secondary,.7);
+
+		@include respond(xl){
+			font-size: 3rem;
+		}
+		@include respond(xs){
+			font-size: 2rem;
+		}
+		@include respond(xxl){
+			font-size: 5rem;
+		}
+
+		span{
+			font-size: 5rem;
+			color:$color-tertiary-light;
+
+			@include respond(xl){
+				font-size: 4rem;
+			}
+			@include respond(xs){
+				font-size: 2.6rem;
+			}
+			@include respond(xxl){
+				font-size: 6.5rem;
+			}
+		}
+	}
+
+	&__price{
+		font-family: $font-raleway;
+		color:$color-tertiary-light;
+		text-align: center;
+		font-size: 10rem;
+		text-shadow: 1rem 1rem 1rem rgba(0,0,0,.3);
+		line-height: 1;
+		z-index: 89;
+		@include respond(xl){
+			font-size: 7.5rem;
+		}
+		@include respond(xs){
+			font-size: 6rem;
+		}
+		@include respond(xxl){
+			font-size: 12rem;
+		}
+		span{
+			font-size: 8rem;
+			@include respond(xl){
+				font-size: 6rem;
+			}
+			@include respond(xs){
+				font-size: 4.5rem;
+			}
+			@include respond(xxl){
+				font-size: 9rem;
+			}
+		}
+			
+	}
+
+	&__list{
+		display:block;
+		list-style: none;
+		margin-top: 2rem;
+		z-index: 89;
+
+
+		&--item{
+
+			margin: 1rem 0;
+			padding:1rem 2rem;
+			
+			@include respond(xl){
+				padding:.5rem 1.5rem;
+			}
+			@include respond(s){
+				margin: .5rem 0;
+				padding:.5rem 1rem;
+			}
+
+			&-text{
+				font-family: $font-poiret;
+				font-size: 2rem;
+				display:flex;
+				align-items: center;
+				
+				color:snow;
+				
+				@include respond(xl){
+					font-size: 1.8rem;
+				}
+				@include respond(l){
+					font-size: 2rem;
+				}
+				@include respond(m){
+					font-size: 2.5rem;
+				}
+				@include respond(xs){
+					font-size: 2rem;
+				}
+				@include respond(xxl){
+					font-size: 2.8rem;
+				}
+
+				span{
+					//display:inline-block;
+					line-height: 1.2;
+					background-color: $color-primary;
+					border-radius: 3px;
+					color:snow;
+					padding:.3rem 1rem;
+					margin:0 .5rem;
+					font-size: 2.2rem;
+					//text-transform: uppercase;
+					font-weight: 500;
+					box-shadow: .5rem .5rem .5rem rgba(0,0,0,.3);
+					@include respond(xl){
+						padding:.1rem .5rem;
+						font-size: 1.8rem;
+					}
+					@include respond(l){
+						font-size: 2.2rem;
+					}
+					@include respond(m){
+						font-size: 2.6rem;
+					}
+					@include respond(xs){
+						padding:.2rem .5rem;
+						font-size: 2.5rem;
+					}
+					@include respond(xxl){
+						font-size: 3rem;
+					}
+				}
+			}
+
+		}
+	}
+
+	&__btn{
+		margin-bottom: 3rem;
+		display:block;
+		z-index: 89;
+		padding:.5rem 3rem;
+		border-radius: 3px;
+		background-color: $color-green;
+		font-family: $font-poiret;
+		font-size: 3rem;
+		font-weight: 300;
+		color:white;
+		letter-spacing: .2rem;
+		box-shadow: 0 1rem 1rem rgba(0,0,0,.3);
+		transition: all .3s;
+		cursor:pointer;
+
+		&:hover{
+			transform:translatey(-.3rem);
+			box-shadow: 0 1.5rem 1rem rgba(0,0,0,.1);
+		}
+		&:active{
+			transform:translatey(-.2rem);
+			box-shadow: 0 1.3rem 1rem rgba(0,0,0,.2);
+		}
+
+		@include respond(xl){
+			padding:.5rem 2rem;
+			font-size: 2.6rem;
+		}
+		@include respond(l){
+			padding:.5rem 2rem;
+			font-size: 2.6rem;
+		}
+
+	}
+}
