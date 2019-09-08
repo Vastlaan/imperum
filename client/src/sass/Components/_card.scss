@@ -113,9 +113,9 @@
 			// @include respond(xl){
 			// 	font-size: 2rem;
 			// }
-			// @include respond(xs){
-			// 	font-size: 1.8rem;
-			// }
+			@include respond(xs){
+				font-size: 2rem;
+			}
 
 		}
 		&--list{

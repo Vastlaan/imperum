@@ -11,10 +11,10 @@ const Backcard = () =>{
 			<h1 className='backcard__header'><span>Geel</span> Pakket</h1>
 			<p className='backcard__price'>29 <span>&euro;</span></p>
 			<ul className='backcard__list'>
-				<li className='backcard__list--item'><p className='backcard__list--item-text'> <span>Sterk design</span> aan uw bedrijf gepast.</p></li>
-				<li className='backcard__list--item'><p className='backcard__list--item-text'> Inclusief <span>Web Hosting</span> en <span>Domein Naam</span>.</p></li>
-				<li className='backcard__list--item'><p className='backcard__list--item-text'><span>Gratis</span> tekst wijzigingen.</p></li>
-				<li className='backcard__list--item'><p className='backcard__list--item-text'><span>Service 7 dagen</span> in de week!</p></li>
+				<li className='backcard__list--item'><p className='backcard__list--item-text'> Sterk design aan uw bedrijf gepast.</p></li>
+				<li className='backcard__list--item'><p className='backcard__list--item-text'> Inclusief Web Hosting en Domein Naam.</p></li>
+				<li className='backcard__list--item'><p className='backcard__list--item-text'>Gratis tekst wijzigingen.</p></li>
+				<li className='backcard__list--item'><p className='backcard__list--item-text'>Service 7 dagen in de week!</p></li>
 			</ul>
 			<div className='backcard__btn'>Bestel</div>
 		</div>
