@@ -24,6 +24,7 @@
 		color:white;
 		cursor:pointer;
 		border-radius: 3px;
+		z-index: 103;
 
 		@include respond(s){
 			top:1rem;
@@ -150,8 +151,6 @@
 
 				&-i{
 					color:$color-secondary;
-					
-					
 				}
 			}
 		}

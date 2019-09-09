@@ -4,7 +4,7 @@
 		@media only screen and (max-width: 75em){@content}
 	}
 	@if $breakpoint == "l"{
-		@media only screen and (max-width: 62.5em){@content}
+		@media only screen and (max-width: 64.5em){@content} 
 	}
 	@if $breakpoint == "m"{
 		@media only screen and (max-width: 50em){@content}
@@ -19,3 +19,4 @@
 		@media only screen and (min-width: 102em){@content}
 	}
 }
+

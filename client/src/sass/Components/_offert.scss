@@ -14,6 +14,8 @@
 
 
 	&__development{
+		display:block;
+
 		height:70rem;  //test
 		flex:0 0 50%;
 		
@@ -183,9 +185,13 @@
 			width:70%;
 			margin:0 auto;
 		}
+		@include respond(m){
+			width:60%;
+			margin:5rem auto;
+		}
 		@include respond(s){
-			width:80%;
-			margin:0 auto;
+			width:70%;
+			margin:5rem auto;
 		}
 
 

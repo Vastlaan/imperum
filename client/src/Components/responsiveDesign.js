@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import useGlobal from "../store";
 import { MdClose, MdDevices } from "react-icons/md";
 import { FaLaptop, FaTabletAlt, FaMobileAlt } from "react-icons/fa";
@@ -9,6 +9,7 @@ import Frog from '../img/frog.png'
 import { computer } from "../inline_styles/computer"
 import { tablet } from "../inline_styles/tablet"
 import { mobile } from "../inline_styles/mobile"
+import { mobileVersion } from "../inline_styles/mobileVersion"
 
 
 const ResponsiveDesign = () =>{
@@ -16,7 +17,18 @@ const ResponsiveDesign = () =>{
 	const [globalState, globalActions] = useGlobal()
 	const [screen, setScreen] = useState(computer)
 
+	useEffect(()=>{
+		if(window.screen.width<=1024){
+			console.log('ya')
+			setScreen(mobileVersion)
+		}
+	},[])
+
 	const changeDisplay = (target) =>{
+
+		if(window.screen.width<=1024){
+			return setScreen(mobileVersion)
+		}
 
 		if(target===mobile){
 			setScreen(mobile)
@@ -38,7 +50,7 @@ const ResponsiveDesign = () =>{
 				<MdClose />
 			</div>
 
-			<div className='designWindow__box' style={{width:screen.width}}>
+			<div className='designWindow__box' style={{width:screen.width, margin:screen.margin?screen.margin:"2.5% 10rem"}}>
 
 				<div className='designWindow__box__header' style={screen.header}>Responsive Design</div>
 				<div className='designWindow__box__buttons' style={screen.buttons}>

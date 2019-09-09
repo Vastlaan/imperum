@@ -6,9 +6,12 @@
 	display:flex;
 	flex-direction: column;
 	align-items: center;
-
+	
+	@include respond(s){
+		margin: 5rem auto;
+	}
 	@include respond(xs){
-		width:80%;
+		width:70%;
 	}
 
 
