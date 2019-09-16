@@ -4,8 +4,8 @@ export const computer = {
 		top:"0",
 		left:"0",
 		width:"calc(60% - 4rem)",
-		height:"20%",
-		transform:"translate(2rem, 2rem)",
+		height:"15%",
+		transform:"translate(2rem, 3rem)",
 		backgroundColor: "rgba(0,0,0,.1)",
 		borderRadius: "100px"
 	},
@@ -44,5 +44,11 @@ export const computer = {
 	},
 	picture:{
 		width:"33%"
+	},
+	headerSmallText:"Laptop",
+	headerSmall:{
+		flex:"0 0 100%",
+		fontSize:"1.6rem",
+		textAlign:"center"
 	}
 }

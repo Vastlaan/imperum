@@ -9,9 +9,23 @@
 	background-repeat: no-repeat;
 	z-index: 100;
 	animation:showUp .3s ease-out;
-
 	display:flex;
 	justify-content: center;
+
+	&__header{
+		font-family: $font-raleway;
+		font-size: 4rem;
+		color:white;
+		text-shadow: .2rem .2rem .5rem rgba(0,0,0,.3);
+		margin-top: 2rem;
+		padding:1rem 5rem;
+		background-color: rgba(0,0,0,.3);
+		border-radius: 100px;
+
+		@include respond(xs){
+			font-size:3.5rem;
+		}
+	}
 
 	&__close{
 		background-color: $color-secondary;
@@ -51,9 +65,11 @@
 			font-size: 4rem;
 			transition:all 1s;
 			color:rgba($color-primary-dark,.8);
+			line-height: 1;
 			display:flex;
 			align-items: center;
 			justify-content: center;
+			flex-wrap: wrap;
 			
 		}
 
@@ -67,20 +83,20 @@
 			align-items: center;
 
 			&--1{
-				
+				box-shadow: 0 0 2rem rgba(0,0,0,.3);
 				border-radius: 50%;
 				background-color: $color-green;
 				display:flex;
+				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				//animation:pulsate 3s infinite;
 				transition:all .5s;
 				cursor:pointer;
+				position:relative;
 				&:hover{
-					animation:none;
 					transform:scale(1.2);
 				}
-				&>*{
+				&>*:not(p){
 					font-size: 4rem;
 					line-height: 0;
 					color:rgba($color-primary-dark,.7);
@@ -88,12 +104,13 @@
 				}
 			}
 			&--2{
-				
+				box-shadow: 0 0 2rem rgba(0,0,0,.3);
 				border-radius: 50%;
 				background-color: $color-secondary;
 				display:flex;
 				justify-content: center;
 				align-items: center;
+				flex-direction: column;
 				//animation:pulsate 3s .7s infinite;
 				transition:all .5s;
 				cursor:pointer;
@@ -101,7 +118,7 @@
 					animation:none;
 					transform:scale(1.2);
 				}
-				&>*{
+				&>*:not(p){
 					font-size: 4rem;
 					line-height: 0;
 					color:rgba($color-primary-dark,.7);
@@ -109,12 +126,13 @@
 				}
 			}
 			&--3{
-				
+				box-shadow: 0 0 2rem rgba(0,0,0,.3);
 				border-radius: 50%;
 				background-color: $color-tertiary;
 				display:flex;
 				justify-content: center;
 				align-items: center;
+				flex-direction: column;
 				//animation:pulsate 3s 1.2s infinite;
 				transition:all .5s;
 				cursor:pointer;
@@ -122,7 +140,7 @@
 					animation:none;
 					transform:scale(1.2);
 				}
-				&>*{
+				&>*:not(p){
 					font-size: 4rem;
 					line-height: 0;
 					color:rgba($color-primary-dark,.7);
@@ -148,6 +166,7 @@
 				font-size: 10rem;
 				line-height: 0;
 				transition:all 1s;
+				box-shadow: 0 0 2rem rgba(0,0,0,.3);
 
 				&-i{
 					color:$color-secondary;
@@ -189,5 +208,4 @@
 			}
 		}
 	}
-	
 }

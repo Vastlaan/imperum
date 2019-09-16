@@ -30,6 +30,18 @@ const Design = () =>{
 					
 				</div>
 			</div>
+			
+			<div className='design__section' onClick={()=>globalActions.handleOptimizeDesignDisplay()}>
+				<h1 className='design__section--header'>Search Optimization</h1>
+				<div className='design__section--icon design__section--icon-3'>
+					<FaSearchengin className='design__section--icon-i' />
+				</div>
+				<div className='design__section--para'>
+					<p>Wij zorgen dat jouw website online-zichtbaar is. Zodat klanten van gewenste doelgroup worden altijd bereikt.</p>
+					
+				</div>
+			</div>
+
 			<div className='design__section' onClick={()=>globalActions.handleModernDesignDisplay()}>
 				<h1 className='design__section--header'>Modern Design</h1>
 				<div className='design__section--icon design__section--icon-2'>
@@ -41,16 +53,7 @@ const Design = () =>{
 					<p>lorem ipsum dolor sit amet</p>
 				</div>
 			</div>
-			<div className='design__section' onClick={()=>globalActions.handleOptimizeDesignDisplay()}>
-				<h1 className='design__section--header'>Search Optimization</h1>
-				<div className='design__section--icon design__section--icon-3'>
-					<FaSearchengin className='design__section--icon-i' />
-				</div>
-				<div className='design__section--para'>
-					<p>Wij zorgen dat jouw website online-zichtbaar is. Zodat klanten van gewenste doelgroup worden altijd bereikt.</p>
-					
-				</div>
-			</div>
+			
 			<div className='design__section' onClick={()=>globalActions.handleFunctionalDesignDisplay()}>
 				<h1 className='design__section--header'>Desired Functionality</h1>
 				<div className='design__section--icon design__section--icon-4'>

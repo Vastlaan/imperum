@@ -56,5 +56,11 @@ export const mobile = {
 	iconBox:{
 		padding:"3rem",
 		fontSize:"6rem"
+	},
+	headerSmallText:"Mobile",
+	headerSmall:{
+		flex:"0 0 100%",
+		fontSize:"1.6rem",
+		textAlign:"center"
 	}
 }

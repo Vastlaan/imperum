@@ -34,11 +34,17 @@
 .blue{
 	color:$color-primary;
 }
+.blueG{
+	color:#4285F4;
+}
 .darkblue{
 	color:lighten($color-primary-dark,11%);
 }
 .green{
 	color:yellowgreen;
+}
+.greenG{
+	color: #0F9D58;
 }
 .red{
 	color:$color-secondary;

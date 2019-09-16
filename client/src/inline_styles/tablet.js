@@ -48,5 +48,11 @@ export const tablet = {
 	},
 	picture:{
 		width:"33%"
+	},
+	headerSmallText:"Tablet",
+	headerSmall:{
+		flex:"0 0 100%",
+		fontSize:"1.6rem",
+		textAlign:"center"
 	}
 }

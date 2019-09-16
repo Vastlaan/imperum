@@ -52,7 +52,10 @@ const ResponsiveDesign = () =>{
 
 			<div className='designWindow__box' style={{width:screen.width, margin:screen.margin?screen.margin:"2.5% 10rem"}}>
 
-				<div className='designWindow__box__header' style={screen.header}>Responsive Design</div>
+				<div className='designWindow__box__header' style={screen.header}>
+					Responsive Design
+					<span style={screen.headerSmall}>{"< "}{screen.headerSmallText} Layout{" >"}</span>
+				</div>
 				<div className='designWindow__box__buttons' style={screen.buttons}>
 					<div className='designWindow__box__buttons--1' style={screen.button} onClick={()=>changeDisplay(computer)}>
 						<FaLaptop style={screen.buttonIcon}  />

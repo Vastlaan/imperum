@@ -102,19 +102,23 @@
 	&__details{
 
 		width:100%;
-		padding-left: 10%;
+		//padding-left: 10%;
 		z-index: 79;
-		color:white;
-		font-family: $font-poiret;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
 
 		&--header{
-			font-size: 2.5rem;
+			color:white;
+			font-family: $font-raleway;
+			font-weight: 300;
+			font-size: 2rem;
 			letter-spacing: .2rem;
 			// @include respond(xl){
 			// 	font-size: 2rem;
 			// }
 			@include respond(xs){
-				font-size: 2rem;
+				font-size: 1.8rem;
 			}
 
 		}
@@ -124,12 +128,17 @@
 			flex-direction: column;
 			margin-left: 10%;
 			margin-top: 2rem;
+			color:white;
+			
+			
 
 			li{
 				font-size: 2rem;
-				letter-spacing: .2rem;
+				letter-spacing: .3rem;
 				display: flex;
 				align-items: center;
+				font-weight: 200;
+				font-family: $font-poiret;
 				// @include respond(xl){
 				// 	font-size: 1.8rem;
 				// }
@@ -151,7 +160,8 @@
 			bottom:3rem;
 			right:3rem;
 			font-size:5rem;
-			color:$color-green;
+			color:$color-tertiary-light;
+			transform:scale(2) rotate(90deg);
 			//box-shadow: 1rem 1rem 1rem rgba(0,0,0,.3);
 
 			@include respond(l){

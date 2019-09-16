@@ -1,6 +1,6 @@
 import React from 'react';
 import {FaCheck} from 'react-icons/fa'
-import { TiArrowForward } from "react-icons/ti";
+import { MdUnfoldMore } from "react-icons/md";
 
 const Card = () =>{
 	return(
@@ -15,14 +15,14 @@ const Card = () =>{
 				</div>
 			</div>
 			<div className='card__details'>
-				<h1 className='card__details--header'>All Inclusief:</h1>
+				<h1 className='card__details--header'>ALL INCLUSIEF</h1>
 				<ul className='card__details--list'>
 					<li><FaCheck className='card__details--list-icon'/> Design</li>
 					<li><FaCheck className='card__details--list-icon'/> Developing</li>
 					<li><FaCheck className='card__details--list-icon'/> Domein naam</li>
 					<li><FaCheck className='card__details--list-icon'/> Web Hosting</li>
 				</ul>
-				<TiArrowForward className='card__details--medal' />
+				<MdUnfoldMore className='card__details--medal' />
 				
 			</div>
 		</div>
