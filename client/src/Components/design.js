@@ -1,6 +1,6 @@
 import React from 'react';
 import {FaCogs, FaSearchengin} from 'react-icons/fa'
-import { MdDevices, MdWallpaper } from "react-icons/md";
+import { MdDevices, MdWallpaper} from "react-icons/md";
 import useGlobal from "../store";
 import ResponsiveDesign from './responsiveDesign'
 import ModernDesign from './modernDesign'

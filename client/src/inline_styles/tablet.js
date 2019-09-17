@@ -49,6 +49,10 @@ export const tablet = {
 	picture:{
 		width:"33%"
 	},
+	iconBox:{
+		paddingLeft:"0",
+		fontSize:"3.5rem"
+	},
 	headerSmallText:"Tablet",
 	headerSmall:{
 		flex:"0 0 100%",

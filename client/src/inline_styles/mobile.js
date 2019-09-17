@@ -21,7 +21,8 @@ export const mobile = {
 		top:"calc(40% + 2rem)",
 		left:"0",
 		width: "calc(100%)",
-		height:"10%"
+		height:"10%",
+		paddingLeft:"0"
 	},
 	para:{
 		top:"calc(55% + 5rem)",
@@ -54,8 +55,9 @@ export const mobile = {
 		width:"100%"
 	},
 	iconBox:{
-		padding:"3rem",
-		fontSize:"6rem"
+		padding:"1rem",
+		paddingLeft:"0",
+		fontSize:"3rem"
 	},
 	headerSmallText:"Mobile",
 	headerSmall:{

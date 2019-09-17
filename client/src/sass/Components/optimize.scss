@@ -11,8 +11,9 @@
 	animation:showUp .3s ease-out;
 	display:grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: 12rem repeat(2, 1fr);
+	grid-template-rows: 12rem repeat(2, min-content);
 	padding:2rem;
+	overflow-y:scroll;
 
 	&__close{
 		background-color: $color-secondary;
@@ -66,7 +67,7 @@
 		grid-row: 2/4;
 		display:grid;
 		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: 5rem repeat(5, 1fr);
+		grid-template-rows: 5rem repeat(3, min-content);
 
 		@include respond(xl){
 			grid-column: 1/-1;
@@ -86,9 +87,9 @@
 		&--google{
 
 			grid-column: 1/-1;
-			grid-row: 2/4;
-			//border:1px solid red;
+			grid-row: 2/3;
 			padding:1rem;
+			align-self:center;
 
 			h3{
 				font-family: $font-google;
@@ -96,21 +97,39 @@
 				text-align: center;
 				text-shadow: .3rem .3rem .5rem rgba(0,0,0,.3);
 			}
+		}
 
-			h6{
-				font-family: $font-poiret;
-				font-size:1.8rem;
-				text-align: center;
-				color:white;
-				font-weight:300;
-				letter-spacing:.1rem;
+		&--list{
+			grid-row: 3/4;
+			grid-column: 2/6;
+			list-style: none;
+			font-family: $font-poiret;
+			font-size:2.4rem;
+			color:$color-tertiary;
+			font-weight:300;
+			letter-spacing:.1rem;
+			z-index: 99;
+			text-shadow: .3rem .3rem .5rem rgba(0,0,0,.7);
+
+			@include respond(xs){
+				grid-column: 1/-1;
 			}
+			
+			li{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			li>:first-child{
+				margin-right: 1rem;
+			}
+
+
 		}
 		&--bing{
 
 			grid-column: 4/7;
-			grid-row: 5/-1;
-			//border:1px solid red;
+			grid-row: 4/5;
 			padding:1rem;
 
 			h3{
@@ -125,43 +144,26 @@
 				align-items: center;
 
 			}
-			h6{
-				font-family: $font-poiret;
-				font-size:1.8rem;
-				text-align: center;
-				color:white;
-				font-weight:300;
-				letter-spacing:.1rem;
-			}
 		}
 		&--yahoo{
 
 			grid-column: 1/4;
-			grid-row: 5/-1;
+			grid-row: 4/5;
 			padding:1rem;
 
 			h3{
 				font-size: 8rem;
-    			transform: scale(1.5);
+    			transform: scale(1.7);
 				color:#720e9e;
 				display:flex;
 				justify-content: center;
 				align-items: center;
 
 			}
-
-			h6{
-				font-family: $font-poiret;
-				font-size:1.8rem;
-				text-align: center;
-				color:white;
-				font-weight:300;
-				letter-spacing:.1rem;
-			}
 		}
 
 		&--icon{
-			grid-row: 4/5;
+			grid-row: 3/4;
 			grid-column: 3/5;
 			display:flex;
 			justify-content: center;
@@ -169,7 +171,11 @@
 
 			&-i{
 				font-size:15rem;
-				color:darken($color-secondary,5%);
+				color:rgba(darken($color-secondary,5%),.3);
+
+				@include respond(s){
+					font-size: 10rem;
+				}
 			}
 		}
 	}

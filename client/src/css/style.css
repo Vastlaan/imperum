@@ -1076,19 +1076,19 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
+      padding-left: 5rem;
       transition: all 1s; }
       .designWindow__box__icon-box {
-        display: inline-block;
-        padding: 5rem;
-        background-color: rgba(54, 181, 64, 0.7);
-        border-radius: 5px;
-        font-size: 10rem;
-        line-height: 0;
-        transition: all 1s;
-        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3); }
-        .designWindow__box__icon-box-i {
-          color: #fe5e51; }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Dancing Script", cursive;
+        font-size: 4rem;
+        color: #fe5e51;
+        text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+        letter-spacing: .2rem;
+        transform: rotate(5deg);
+        transition: all 1s; }
     .designWindow__box__para {
       position: absolute;
       display: flex;
@@ -1127,8 +1127,9 @@ body {
   animation: showUp .3s ease-out;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 12rem repeat(2, 1fr);
-  padding: 2rem; }
+  grid-template-rows: 12rem repeat(2, min-content);
+  padding: 2rem;
+  overflow-y: scroll; }
   .optimize__close {
     background-color: #fe5e51;
     padding: .5rem;
@@ -1175,7 +1176,7 @@ body {
     grid-row: 2/4;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 5rem repeat(5, 1fr); }
+    grid-template-rows: 5rem repeat(3, min-content); }
     @media only screen and (max-width: 75em) {
       .optimize__info {
         grid-column: 1/-1;
@@ -1190,23 +1191,37 @@ body {
       color: #ffb554; }
     .optimize__info--google {
       grid-column: 1/-1;
-      grid-row: 2/4;
-      padding: 1rem; }
+      grid-row: 2/3;
+      padding: 1rem;
+      align-self: center; }
       .optimize__info--google h3 {
         font-family: "Cormorant Garamond", serif;
         font-size: 5rem;
         text-align: center;
         text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3); }
-      .optimize__info--google h6 {
-        font-family: "Poiret One", cursive;
-        font-size: 1.8rem;
-        text-align: center;
-        color: white;
-        font-weight: 300;
-        letter-spacing: .1rem; }
+    .optimize__info--list {
+      grid-row: 3/4;
+      grid-column: 2/6;
+      list-style: none;
+      font-family: "Poiret One", cursive;
+      font-size: 2.4rem;
+      color: #ffb554;
+      font-weight: 300;
+      letter-spacing: .1rem;
+      z-index: 99;
+      text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.7); }
+      @media only screen and (max-width: 26.3em) {
+        .optimize__info--list {
+          grid-column: 1/-1; } }
+      .optimize__info--list li {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      .optimize__info--list li > :first-child {
+        margin-right: 1rem; }
     .optimize__info--bing {
       grid-column: 4/7;
-      grid-row: 5/-1;
+      grid-row: 4/5;
       padding: 1rem; }
       .optimize__info--bing h3 {
         font-family: "Arial";
@@ -1218,40 +1233,29 @@ body {
         display: flex;
         justify-content: center;
         align-items: center; }
-      .optimize__info--bing h6 {
-        font-family: "Poiret One", cursive;
-        font-size: 1.8rem;
-        text-align: center;
-        color: white;
-        font-weight: 300;
-        letter-spacing: .1rem; }
     .optimize__info--yahoo {
       grid-column: 1/4;
-      grid-row: 5/-1;
+      grid-row: 4/5;
       padding: 1rem; }
       .optimize__info--yahoo h3 {
         font-size: 8rem;
-        transform: scale(1.5);
+        transform: scale(1.7);
         color: #720e9e;
         display: flex;
         justify-content: center;
         align-items: center; }
-      .optimize__info--yahoo h6 {
-        font-family: "Poiret One", cursive;
-        font-size: 1.8rem;
-        text-align: center;
-        color: white;
-        font-weight: 300;
-        letter-spacing: .1rem; }
     .optimize__info--icon {
-      grid-row: 4/5;
+      grid-row: 3/4;
       grid-column: 3/5;
       display: flex;
       justify-content: center;
       align-items: center; }
       .optimize__info--icon-i {
         font-size: 15rem;
-        color: #fe4738; }
+        color: rgba(254, 71, 56, 0.3); }
+        @media only screen and (max-width: 37.5em) {
+          .optimize__info--icon-i {
+            font-size: 10rem; } }
   .optimize__description {
     grid-column: 2/3;
     grid-row: 2/4;

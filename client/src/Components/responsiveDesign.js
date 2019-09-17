@@ -69,7 +69,8 @@ const ResponsiveDesign = () =>{
 				</div>
 				<div className='designWindow__box__icon' style={screen.icon}>
 					<div className='designWindow__box__icon-box' style={screen.iconBox}>
-						<MdDevices className='designWindow__box__icon-box-i'/>
+						<span>We make it</span>
+						<span>responsive !</span>
 					</div>
 				</div>
 				<div className='designWindow__box__para' style={screen.para}>
