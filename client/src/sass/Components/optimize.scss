@@ -163,15 +163,15 @@
 		}
 
 		&--icon{
-			grid-row: 3/4;
-			grid-column: 3/5;
+			grid-row: 2/3;
+			grid-column: 1/2;
 			display:flex;
 			justify-content: center;
 			align-items: center;
 
 			&-i{
 				font-size:15rem;
-				color:rgba(darken($color-secondary,5%),.3);
+				color:rgba(darken($color-secondary,5%),.0);
 
 				@include respond(s){
 					font-size: 10rem;

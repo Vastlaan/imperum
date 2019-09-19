@@ -1,6 +1,6 @@
 import React from 'react';
 import {FaQuoteLeft, FaQuoteRight} from 'react-icons/fa'
-import {ReactComponent as Svg} from '../img/drawsvg.svg';
+//import {ReactComponent as Svg} from '../img/drawsvg.svg';
 
 const Header = () =>{
 	return(

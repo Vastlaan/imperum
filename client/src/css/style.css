@@ -352,7 +352,7 @@ body {
         .offert__development--rotate {
           width: 100%;
           height: 90%;
-          margin: 0 auto;
+          margin: 7.5rem auto;
           padding: 5% 0; } }
       .offert__development--rotate-side {
         position: absolute;
@@ -816,7 +816,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 69;
+    z-index: 60;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -833,6 +833,9 @@ body {
       text-transform: uppercase;
       line-height: 1.4;
       letter-spacing: .5rem; }
+      @media only screen and (max-width: 26.3em) {
+        .info--background--para {
+          line-height: 1.9; } }
       @media only screen and (min-width: 102em) {
         .info--background--para {
           font-size: 24rem; } }
@@ -1245,14 +1248,14 @@ body {
         justify-content: center;
         align-items: center; }
     .optimize__info--icon {
-      grid-row: 3/4;
-      grid-column: 3/5;
+      grid-row: 2/3;
+      grid-column: 1/2;
       display: flex;
       justify-content: center;
       align-items: center; }
       .optimize__info--icon-i {
         font-size: 15rem;
-        color: rgba(254, 71, 56, 0.3); }
+        color: rgba(254, 71, 56, 0); }
         @media only screen and (max-width: 37.5em) {
           .optimize__info--icon-i {
             font-size: 10rem; } }
@@ -1275,6 +1278,51 @@ body {
       @media only screen and (max-width: 37.5em) {
         .optimize__description p {
           font-size: 2.2rem; } }
+
+.modern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/bubbles.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 100;
+  animation: showUp .3s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modern__close {
+    background-color: #fe5e51;
+    padding: .5rem;
+    line-height: 0;
+    font-size: 4rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    z-index: 103; }
+    @media only screen and (max-width: 37.5em) {
+      .modern__close {
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem; } }
+  .modern__main {
+    width: 90%;
+    height: 90%;
+    background-image: linear-gradient(to bottom right, transparent 5%, rgba(229, 0, 90, 0.1) 6%, rgba(229, 0, 90, 0.2) 10%, transparent 11%, transparent 84%, rgba(229, 0, 90, 0.3) 85%, rgba(229, 0, 90, 0.1) 90%, transparent 91%);
+    box-shadow: 0 0 20rem rgba(255, 255, 255, 0.1); }
+    .modern__main--header h1 {
+      color: white;
+      font-family: "Roboto", sans-serif;
+      font-size: 10rem;
+      line-height: 1;
+      font-weight: 300;
+      letter-spacing: .2rem; }
 
 .block {
   width: 80%;

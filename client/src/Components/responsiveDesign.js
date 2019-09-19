@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import useGlobal from "../store";
-import { MdClose, MdDevices } from "react-icons/md";
+import { MdClose } from "react-icons/md";
 import { FaLaptop, FaTabletAlt, FaMobileAlt } from "react-icons/fa";
 import Tree from '../img/lime.png'
 import Rose from '../img/rose.png'
@@ -19,7 +19,7 @@ const ResponsiveDesign = () =>{
 
 	useEffect(()=>{
 		if(window.screen.width<=1024){
-			console.log('ya')
+			document.querySelector('#mobileInvisible').style.display="none"
 			setScreen(mobileVersion)
 		}
 	},[])
@@ -27,6 +27,13 @@ const ResponsiveDesign = () =>{
 	const changeDisplay = (target) =>{
 
 		if(window.screen.width<=1024){
+			if(target===mobile){
+				setScreen(mobileVersion)
+			}else if(target===tablet){
+				setScreen(mobileVersion)
+			}else if(target===computer){
+				setScreen(mobileVersion)
+			}
 			return setScreen(mobileVersion)
 		}
 
@@ -78,7 +85,7 @@ const ResponsiveDesign = () =>{
 						In de wereld bestaat meer dan 35 milijard apparaten die met Internet kunnen verbinden. 
 						Laptops, PC's, tablets, mobieltjes - bijna idereen maakt dagelijks gebruik van een van die apparaten.
 						Daarom is het heel belangrijk dat jouw website goed eruitziet op verschillende schermresoluties.
-						Om daar een beter beeld van te krijgen klik een van de bovenste knopies - de layout gaat tot mobiel, tablet of computer maat aanpassen.
+						<span id='mobileInvisible'>Om daar een beter beeld van te krijgen klik een van de bovenste knopies - de layout gaat tot mobiel, tablet of computer maat aanpassen.</span>
 					</p>
 				</div>
 				<div className='designWindow__box__images' style={screen.images}>

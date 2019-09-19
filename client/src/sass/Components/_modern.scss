@@ -1,0 +1,65 @@
+.modern{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	background-image: url(../img/bubbles.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 100;
+	animation:showUp .3s ease-out;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+
+	&__close{
+		background-color: $color-secondary;
+		padding:.5rem;
+		line-height: 0;
+		font-size: 4rem;
+		position:absolute;
+		top:1rem;
+		right:1rem;
+		color:white;
+		cursor:pointer;
+		border-radius: 3px;
+		z-index: 103;
+
+		@include respond(s){
+			top:1rem;
+			right:1rem;
+			font-size: 2rem;
+		}
+	}
+
+	&__main{
+		width:90%;
+		height:90%;
+		background-image: linear-gradient(
+			to bottom right, 
+			transparent 5%, 
+			rgba(#e5005a,.1) 6%, 
+			rgba(#e5005a,.2) 10%, 
+			transparent 11%,
+			transparent 84%,
+			rgba(#e5005a,.3) 85%,
+			rgba(#e5005a,.1) 90%,
+			transparent 91%,
+		);
+		box-shadow: 0 0 20rem rgba(white,.1);
+
+		&--header{		
+
+			h1{
+				color:white;
+				font-family: $font-roboto;
+				font-size: 10rem;
+				line-height: 1;
+				font-weight: 300;
+				letter-spacing: .2rem;
+			}
+		}
+	}
+}

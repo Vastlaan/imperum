@@ -55,8 +55,10 @@ export const mobileVersion = {
 		width:"100%"
 	},
 	iconBox:{
-		padding:"6rem",
-		fontSize:"8rem"
+		padding:"1rem",
+		paddingLeft:"0",
+		fontSize:"5rem",
+		transform:"translateY(-1rem)"
 	},
 	headerSmallText:"Mobile Only",
 	headerSmall:{

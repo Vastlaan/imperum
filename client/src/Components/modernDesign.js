@@ -7,15 +7,20 @@ const ModernDesign = (style) =>{
 	const [globalState, globalActions] = useGlobal()
 
 	return(
-		<div className='designWindow'>
+		<div className='modern'>
 
 			<div 
-				className='designWindow__close' 
+				className='modern__close' 
 				onClick={()=>globalActions.handleModernDesignDisplay()}
 			>
 				<MdClose />
 			</div>
-			<div className='designWindow__header'>Modern Design</div>
+			<div className='modern__main'>
+				<div className='modern__main--header'>
+					<h1>Modern</h1>
+					<h1>Design</h1>
+				</div>
+			</div>
 		</div>
 	)
 }
