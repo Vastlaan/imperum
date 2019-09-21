@@ -52,3 +52,20 @@
 .yellow{
 	color:$color-tertiary-light;
 }
+
+.border-blue{
+	box-shadow: 0 0 1rem rgba($color-neon-blue,.6);
+	background-color: rgba($color-neon-blue,.15);
+}
+.border-pink{
+	box-shadow: 0 0 1rem rgba($color-neon-pink,.6);
+	background-color: rgba($color-neon-pink,.15);
+}
+.border-green{
+	box-shadow: 0 0 1rem rgba($color-neon-green,.6);
+	background-color: rgba($color-neon-green,.15);
+}
+.border-red{
+	box-shadow: 0 0 1rem rgba($color-neon-red,.6);
+	background-color: rgba($color-neon-red,.15);
+}
