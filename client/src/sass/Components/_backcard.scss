@@ -198,6 +198,7 @@
 		box-shadow: 0 1rem 1rem rgba(0,0,0,.3);
 		transition: all .3s;
 		cursor:pointer;
+		text-decoration: none;
 
 		&:hover{
 			transform:translatey(-.3rem);

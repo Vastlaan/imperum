@@ -14,8 +14,8 @@ const Footer =() =>{
 				</div>
 
 				<div className='footer__contact--address'>
-					<p className='footer__contact--address-phone'><MdPhone className='footer__contact--address-phone-i'/>06 82 30 70 51</p>
-					<p className='footer__contact--address-email'><MdMailOutline className='footer__contact--address-email-i'/>info@imperum.nl</p>
+					<a href='tel:0031682307051' className='footer__contact--address-phone'><MdPhone className='footer__contact--address-phone-i'/>06 82 30 70 51</a>
+					<a href='mailto:info@imperum.com' className='footer__contact--address-email'><MdMailOutline className='footer__contact--address-email-i'/>info@imperum.nl</a>
 					<p className='footer__contact--address-street'>Michal Antczak</p>
 					<p className='footer__contact--address-street'>Oostervenne 397</p>
 					<p className='footer__contact--address-city'>1444 XN Purmerend</p>
@@ -37,9 +37,9 @@ const Footer =() =>{
 
 			<div className='footer__legal'>
 				<div className='footer__legal--cookies'><FaCookieBite/></div>
-				<p className='footer__legal--para'>Over ons</p>
-				<p className='footer__legal--para'>Algemeen voorwaarden</p>
-				<p className='footer__legal--para'>Cookies verklaring</p>
+				<a href='/about' className='footer__legal--para'>Over ons</a>
+				<a href='privacy' className='footer__legal--para'>Algemeen voorwaarden</a>
+				<a href='privacy' className='footer__legal--para'>Cookies verklaring</a>
 			</div>
 
 		</div>

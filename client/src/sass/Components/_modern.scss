@@ -78,6 +78,117 @@
 					letter-spacing: .1rem;
 				}
 			}
+
+			&-blue{
+				box-shadow: 0 0 1rem rgba($color-neon-blue,.6);
+				background-color: rgba($color-neon-blue,.15);
+				position:relative;
+				transition:all .3s;
+				cursor:pointer;
+				&::after{
+					content:"";
+					position:absolute;
+					top:0;
+					right:0;
+					width:100%;
+					height:100%;
+					border-radius: 100px;
+					border: 1px solid rgba($color-neon-blue,.3);
+					animation: saturate 4s infinite;
+					animation-delay: 0s;
+					//transform:rotate(135deg);
+				}
+				&:hover{
+					background-color: rgba($color-neon-blue,.35);
+					transform:scale(1.1);
+					&::after{
+						animation:none;
+						border:none;
+					}
+
+				}
+			}
+			&-pink{
+				box-shadow: 0 0 1rem rgba($color-neon-pink,.6);
+				background-color: rgba($color-neon-pink,.15);
+				position:relative;
+				transition:all .3s;
+				cursor:pointer;
+				&::after{
+					content:"";
+					position:absolute;
+					top:0;
+					right:0;
+					width:100%;
+					height:100%;
+					border-radius: 100px;
+					border: 1px solid rgba($color-neon-pink,.3);
+					animation: saturate 4s infinite;
+					animation-delay: .5s;
+				}
+				&:hover{
+					background-color: rgba($color-neon-pink,.35);
+					transform:scale(1.1);
+					&::after{
+						animation:none;
+						border:none;
+					}
+				}
+			}
+			&-green{
+				box-shadow: 0 0 1rem rgba($color-neon-green,.6);
+				background-color: rgba($color-neon-green,.15);
+				position:relative;
+				transition:all .3s;
+				cursor:pointer;
+				&::after{
+					content:"";
+					position:absolute;
+					top:0;
+					right:0;
+					width:100%;
+					height:100%;
+					border-radius: 100px;
+					border: 1px solid rgba($color-neon-green,.3);
+					animation: saturate 4s infinite;
+					animation-delay: .5s;
+				}
+				&:hover{
+					background-color: rgba($color-neon-green,.35);
+					transform:scale(1.1);
+					&::after{
+						animation:none;
+						border:none;
+					}
+				}
+			}
+			&-red{
+				box-shadow: 0 0 1rem rgba($color-neon-red,.6);
+				background-color: rgba($color-neon-red,.15);
+				position:relative;
+				transition:all .3s;
+				cursor:pointer;
+				&::after{
+					content:"";
+					position:absolute;
+					top:0;
+					right:0;
+					width:100%;
+					height:100%;
+					border-radius: 100px;
+					border: 1px solid rgba($color-neon-red,.3);
+					animation: saturate 4s infinite;
+					animation-delay: .5s;
+				}
+				&:hover{
+					background-color: rgba($color-neon-red,.35);
+					transform:scale(1.1);
+					&::after{
+						animation:none;
+						border:none;
+					}
+				}
+			}
 		}
 
 		&--header{	
@@ -89,55 +200,12 @@
 			display:flex;
 			flex-direction: column;
 			justify-content: center;
+			pointer-events: none;
 
 			@include respond(s){
 				grid-column: 2/-2;
-			}
-
-			&:hover{
-
-				&-blue{
-					animation:rotate .8s ease-in;
-				}
-			}
-			
-
-			&-blue{
-				border-radius: 50px;
-				position:absolute;
-				top:0;
-				right:0;
-				width:2px;
-				height:100%;
-				background-color: $color-neon-blue;
-				//box-shadow: .1rem 0 .2rem rgba($color-neon-blue,.9);
-				animation:saturate 2s infinite;
-				animation-delay: .5s;
-				
-			}
-			&-red{
-				border-radius: 50px;
-				position:absolute;
-				top:0;
-				right:0;
-				width:50%;
-				height:2px;
-				background-color: $color-neon-red;
-				//box-shadow: .1rem 0 .2rem rgba($color-neon-blue,.9);
-				animation:saturate 2s infinite;
-			}
-			&-yellow{
-				
-				position:absolute;
-				bottom:0;
-				right:0;
-				width:50%;
-				height:2px;
-				background-color: $color-neon-pink;
-				//box-shadow: .1rem 0 .2rem rgba($color-neon-blue,.9);
-				animation:saturate 2s infinite;
-				animation-delay: 1s;
-			}
+				grid-row: 2/4;
+			}			
 
 			h1{
 				color:white;
@@ -145,6 +213,116 @@
 				font-size: 10rem;
 				line-height: 1;
 				font-weight: 300;
+				letter-spacing: .2rem;
+				@include respond(s){
+					font-size: 7rem;
+				}
+			}
+		}
+		&--buttons{
+			grid-column: 4/6;
+			grid-row: 5/6;
+			width:20rem;
+			height:20rem;
+			position:relative;
+			align-self: center;
+
+			@include respond(s){
+				grid-column: 5/-2;
+				grid-row: 3/5;
+
+			}
+			
+			&-1{
+				width:8rem;
+				height:8rem;
+				position:absolute;
+				top:-5rem;
+				right:-5rem;
+				box-shadow: 0 0 1.5rem rgba($color-neon-green,1);
+				border:2px solid $color-neon-green;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color:$color-neon-green;
+				font-size: 3rem;
+				font-weight: 300;
+				cursor:pointer;
+				&:hover{
+					animation:pulsateOne .5s ease-in;
+				}
+			}
+			&-2{
+				width:7rem;
+				height:7rem;
+				position:absolute;
+				top:6rem;
+				right:0rem;
+				box-shadow: 0 0 1.5rem rgba($color-neon-pink,1);
+				border:2px solid $color-neon-pink;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color:$color-neon-pink;
+				font-size: 3rem;
+				font-weight: 300;
+				cursor:pointer;
+				&:hover{
+					animation:pulsateOne .5s ease-in;
+				}
+			}
+			&-3{
+				width:5rem;
+				height:5rem;
+				position:absolute;
+				bottom:2rem;
+				right:10rem;
+				box-shadow: 0 0 1.5rem rgba($color-neon-red,1);
+				border:2px solid $color-neon-red;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color:$color-neon-red;
+				font-size: 3rem;
+				font-weight: 300;
+				cursor:pointer;
+				&:hover{
+					animation:pulsateOne .5s ease-in;
+				}
+			}
+
+		}
+		&--text{	
+
+			grid-column: 8/12;
+			grid-row: 3/6;
+			display:flex;
+			flex-direction: column;
+			padding:1rem;
+			overflow-y:scroll;
+			background-color: rgba(0,0,0,.2);
+			border-radius: 10px;
+			//justify-content: center;
+			@include respond(s){
+				grid-column: 2/12;
+				grid-row: 5 / -1;
+			}
+
+			&::-webkit-scrollbar{
+				display:block;
+				width:2px;
+			}
+			&::-webkit-scrollbar-thumb{
+				background-color: rgba($color-neon-pink,.6);
+			}
+
+			p{
+				color:white;
+				font-family: $font-poiret;
+				font-size: 1.8rem;
 				letter-spacing: .2rem;
 			}
 		}

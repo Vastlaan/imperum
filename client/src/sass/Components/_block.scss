@@ -125,6 +125,7 @@
 		cursor: pointer;
 		box-shadow: 0 .8rem .8rem rgba(0,0,0,.3);
 		transition:all .3s;
+		text-decoration: none;
 
 		&:hover{
 			transform:translateY(-.2rem);

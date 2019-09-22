@@ -16,7 +16,7 @@ const Backcard = () =>{
 				<li className='backcard__list--item'><p className='backcard__list--item-text'>Gratis tekst wijzigingen.</p></li>
 				<li className='backcard__list--item'><p className='backcard__list--item-text'>Service 7 dagen in de week!</p></li>
 			</ul>
-			<div className='backcard__btn'>Bestel</div>
+			<a href='/pakkets' className='backcard__btn'>Bestel</a>
 		</div>
 		)
 }

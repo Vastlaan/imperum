@@ -106,14 +106,24 @@ body {
   100% {
     transform: scale(1); } }
 
+@keyframes pulsateOne {
+  0% {
+    transform: scale(1); }
+  40% {
+    transform: scale(1.1); }
+  80% {
+    transform: scale(1); } }
+
 @keyframes saturate {
   0% {
-    filter: blur(5px) saturate(1);
-    transform: rotate(0deg); }
+    opacity: 0.1;
+    filter: blur(1px) saturate(1); }
   50% {
-    filter: blur(5px) saturate(4); }
+    opacity: 1;
+    filter: blur(1px) saturate(4); }
   100% {
-    filter: blur(5px) saturate(1); } }
+    opacity: 0.1;
+    filter: blur(1px) saturate(1); } }
 
 @keyframes rotate {
   0% {
@@ -813,7 +823,8 @@ body {
     letter-spacing: .2rem;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
     transition: all .3s;
-    cursor: pointer; }
+    cursor: pointer;
+    text-decoration: none; }
     .backcard__btn:hover {
       transform: translatey(-0.3rem);
       box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.1); }
@@ -1211,7 +1222,7 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 5rem repeat(3, min-content); }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 64.5em) {
       .optimize__info {
         grid-column: 1/-1;
         grid-row: 2/4; } }
@@ -1296,10 +1307,17 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center; }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 64.5em) {
       .optimize__description {
         grid-column: 1/-1;
-        grid-row: 4/6; } }
+        grid-row: 4/6;
+        width: 50%;
+        justify-self: center;
+        line-height: 2; } }
+    @media only screen and (max-width: 37.5em) {
+      .optimize__description {
+        width: 90%;
+        line-height: 1.6; } }
     .optimize__description p {
       font-family: "Poiret One", cursive;
       font-size: 1.8rem;
@@ -1372,6 +1390,98 @@ body {
             padding: .5rem 1rem;
             font-size: 1.6rem;
             letter-spacing: .1rem; } }
+      .modern__main--menu-blue {
+        box-shadow: 0 0 1rem rgba(1, 30, 254, 0.6);
+        background-color: rgba(1, 30, 254, 0.15);
+        position: relative;
+        transition: all .3s;
+        cursor: pointer; }
+        .modern__main--menu-blue::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 100px;
+          border: 1px solid rgba(1, 30, 254, 0.3);
+          animation: saturate 4s infinite;
+          animation-delay: 0s; }
+        .modern__main--menu-blue:hover {
+          background-color: rgba(1, 30, 254, 0.35);
+          transform: scale(1.1); }
+          .modern__main--menu-blue:hover::after {
+            animation: none;
+            border: none; }
+      .modern__main--menu-pink {
+        box-shadow: 0 0 1rem rgba(254, 0, 246, 0.6);
+        background-color: rgba(254, 0, 246, 0.15);
+        position: relative;
+        transition: all .3s;
+        cursor: pointer; }
+        .modern__main--menu-pink::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 100px;
+          border: 1px solid rgba(254, 0, 246, 0.3);
+          animation: saturate 4s infinite;
+          animation-delay: .5s; }
+        .modern__main--menu-pink:hover {
+          background-color: rgba(254, 0, 246, 0.35);
+          transform: scale(1.1); }
+          .modern__main--menu-pink:hover::after {
+            animation: none;
+            border: none; }
+      .modern__main--menu-green {
+        box-shadow: 0 0 1rem rgba(11, 255, 1, 0.6);
+        background-color: rgba(11, 255, 1, 0.15);
+        position: relative;
+        transition: all .3s;
+        cursor: pointer; }
+        .modern__main--menu-green::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 100px;
+          border: 1px solid rgba(11, 255, 1, 0.3);
+          animation: saturate 4s infinite;
+          animation-delay: .5s; }
+        .modern__main--menu-green:hover {
+          background-color: rgba(11, 255, 1, 0.35);
+          transform: scale(1.1); }
+          .modern__main--menu-green:hover::after {
+            animation: none;
+            border: none; }
+      .modern__main--menu-red {
+        box-shadow: 0 0 1rem rgba(254, 0, 0, 0.6);
+        background-color: rgba(254, 0, 0, 0.15);
+        position: relative;
+        transition: all .3s;
+        cursor: pointer; }
+        .modern__main--menu-red::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 100px;
+          border: 1px solid rgba(254, 0, 0, 0.3);
+          animation: saturate 4s infinite;
+          animation-delay: .5s; }
+        .modern__main--menu-red:hover {
+          background-color: rgba(254, 0, 0, 0.35);
+          transform: scale(1.1); }
+          .modern__main--menu-red:hover::after {
+            animation: none;
+            border: none; }
     .modern__main--header {
       grid-column: 2/8;
       grid-row: 3/5;
@@ -1379,46 +1489,109 @@ body {
       border-radius: 50%;
       display: flex;
       flex-direction: column;
-      justify-content: center; }
+      justify-content: center;
+      pointer-events: none; }
       @media only screen and (max-width: 37.5em) {
         .modern__main--header {
-          grid-column: 2/-2; } }
-      .modern__main--header:hover-blue {
-        animation: rotate .8s ease-in; }
-      .modern__main--header-blue {
-        border-radius: 50px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 2px;
-        height: 100%;
-        background-color: #011efe;
-        animation: saturate 2s infinite;
-        animation-delay: .5s; }
-      .modern__main--header-red {
-        border-radius: 50px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 50%;
-        height: 2px;
-        background-color: #fe0000;
-        animation: saturate 2s infinite; }
-      .modern__main--header-yellow {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 50%;
-        height: 2px;
-        background-color: #FE00F6;
-        animation: saturate 2s infinite;
-        animation-delay: 1s; }
+          grid-column: 2/-2;
+          grid-row: 2/4; } }
       .modern__main--header h1 {
         color: white;
         font-family: "Poiret One", cursive;
         font-size: 10rem;
         line-height: 1;
         font-weight: 300;
+        letter-spacing: .2rem; }
+        @media only screen and (max-width: 37.5em) {
+          .modern__main--header h1 {
+            font-size: 7rem; } }
+    .modern__main--buttons {
+      grid-column: 4/6;
+      grid-row: 5/6;
+      width: 20rem;
+      height: 20rem;
+      position: relative;
+      align-self: center; }
+      @media only screen and (max-width: 37.5em) {
+        .modern__main--buttons {
+          grid-column: 5/-2;
+          grid-row: 3/5; } }
+      .modern__main--buttons-1 {
+        width: 8rem;
+        height: 8rem;
+        position: absolute;
+        top: -5rem;
+        right: -5rem;
+        box-shadow: 0 0 1.5rem #0bff01;
+        border: 2px solid #0bff01;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #0bff01;
+        font-size: 3rem;
+        font-weight: 300;
+        cursor: pointer; }
+        .modern__main--buttons-1:hover {
+          animation: pulsateOne .5s ease-in; }
+      .modern__main--buttons-2 {
+        width: 7rem;
+        height: 7rem;
+        position: absolute;
+        top: 6rem;
+        right: 0rem;
+        box-shadow: 0 0 1.5rem #fe00f6;
+        border: 2px solid #FE00F6;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FE00F6;
+        font-size: 3rem;
+        font-weight: 300;
+        cursor: pointer; }
+        .modern__main--buttons-2:hover {
+          animation: pulsateOne .5s ease-in; }
+      .modern__main--buttons-3 {
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        bottom: 2rem;
+        right: 10rem;
+        box-shadow: 0 0 1.5rem #fe0000;
+        border: 2px solid #fe0000;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fe0000;
+        font-size: 3rem;
+        font-weight: 300;
+        cursor: pointer; }
+        .modern__main--buttons-3:hover {
+          animation: pulsateOne .5s ease-in; }
+    .modern__main--text {
+      grid-column: 8/12;
+      grid-row: 3/6;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      overflow-y: scroll;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 10px; }
+      @media only screen and (max-width: 37.5em) {
+        .modern__main--text {
+          grid-column: 2/12;
+          grid-row: 5 / -1; } }
+      .modern__main--text::-webkit-scrollbar {
+        display: block;
+        width: 2px; }
+      .modern__main--text::-webkit-scrollbar-thumb {
+        background-color: rgba(254, 0, 246, 0.6); }
+      .modern__main--text p {
+        color: white;
+        font-family: "Poiret One", cursive;
+        font-size: 1.8rem;
         letter-spacing: .2rem; }
 
 .block {
@@ -1510,7 +1683,8 @@ body {
     color: white;
     cursor: pointer;
     box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.3);
-    transition: all .3s; }
+    transition: all .3s;
+    text-decoration: none; }
     .pakket__button:hover {
       transform: translateY(-0.2rem);
       box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
@@ -1570,7 +1744,8 @@ body {
         color: rgba(54, 181, 64, 0.8);
         display: flex;
         align-items: center;
-        cursor: pointer; }
+        cursor: pointer;
+        text-decoration: none; }
         .footer__contact--address-phone-i {
           font-size: 4rem;
           margin-right: 1rem; }
@@ -1580,7 +1755,8 @@ body {
         color: rgba(246, 219, 95, 0.8);
         display: flex;
         align-items: center;
-        cursor: pointer; }
+        cursor: pointer;
+        text-decoration: none; }
         .footer__contact--address-email-i {
           font-size: 4rem;
           margin-right: 1rem; }
@@ -1666,6 +1842,7 @@ body {
       color: #36abb5;
       font-size: 2rem;
       transition: color .3s;
-      cursor: pointer; }
+      cursor: pointer;
+      text-decoration: none; }
       .footer__legal--para:hover {
         color: rgba(255, 255, 255, 0.6); }

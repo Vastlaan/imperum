@@ -32,9 +32,9 @@ const Info = () =>{
 								<li>Design aan uw wensen gepast</li>
 								<li>Gratis text wijzigingen</li>
 							</ul>
-							<div className="pakket__button">
+							<a href='/pakkets'className="pakket__button">
 								Meer weten
-							</div>
+							</a>
 						</div>
 					</div>
 					<div className='info__window--blocks-2 block block__2'>
@@ -50,9 +50,9 @@ const Info = () =>{
 								<li>Google Maps</li>
 								<li>Afspraak online maken</li>
 							</ul>
-							<div className="pakket__button">
+							<a href='/pakkets'className="pakket__button">
 								Meer weten
-							</div>
+							</a>
 						</div>
 					</div>
 					<div className='info__window--blocks-3 block block__3'>
@@ -67,9 +67,9 @@ const Info = () =>{
 								<li>Eigen Email Address</li>
 								<li>Particuliere klantenaccounts (inloggen) en online klantenservice</li>
 							</ul>
-							<div className="pakket__button">
+							<a href='/pakkets'className="pakket__button">
 								Meer weten
-							</div>
+							</a>
 						</div>
 					</div>
 				</div>

@@ -48,9 +48,8 @@ const Design = () =>{
 					<MdWallpaper className='design__section--icon-i' />
 				</div>
 				<div className='design__section--para'>
-					<p>lorem ipsum dolor sit amet</p>
-					<p>lorem ipsum dolor sit amet</p>
-					<p>lorem ipsum dolor sit amet</p>
+					<p>Kiezen voor beste design die bij jouw vak past is soms moeilijk. Wij helpen u om besslising te nemen welke style is best voor jou website.</p>
+					<p>Klik om te kijken wat andere - modern design kunnen wij u aanbieden.</p>
 				</div>
 			</div>
 			

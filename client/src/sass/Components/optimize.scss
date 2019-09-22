@@ -69,7 +69,7 @@
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-rows: 5rem repeat(3, min-content);
 
-		@include respond(xl){
+		@include respond(l){
 			grid-column: 1/-1;
 			grid-row: 2/4;
 		}
@@ -188,9 +188,16 @@
 		justify-content: center;
 	
 
-		@include respond(xl){
+		@include respond(l){
 			grid-column: 1/-1;
 			grid-row: 4/6;
+			width:50%;
+			justify-self:center;
+			line-height: 2;
+		}
+		@include respond(s){
+			width:90%;
+			line-height: 1.6;
 		}
 
 		p{
